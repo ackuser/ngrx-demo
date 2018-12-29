@@ -1,0 +1,31 @@
+<div style="text-align:center">
+  <h3>Demo 7 - @ngrx/entity CRUD with Facade Pattern</h3>
+</div>
+<ng-container *ngIf="isLoading$ | async">
+  <div class="loader"></div>
+</ng-container>
+<div class="main">
+  <div class='formbg'>
+    <app-employee-form
+    [employeeToEdit] = "employeeToEdit"
+    [isEditing]="isEditing"
+    (cancel) = "onCancel($event)"
+    (addEmployee)="onAddEmployee($event)"
+    (updateEmployee)="onUpdateEmployee($event)" >
+    </app-employee-form>
+  </div>
+  <div class='tablebg'>
+    <app-employee-table
+    [employees]="employees$ | async"
+    (editEmployee)="onEditEmployee($event)"
+    (deleteEmployee)="onDeleteEmployee($event)" >
+    </app-employee-table>
+  </div>
+</div>
+<div *ngIf="errorMessage$ | async" class="alert-error">
+  {{ errorMessage$ | async }}
+</div>
+
+
+
+

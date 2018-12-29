@@ -1,0 +1,21 @@
+<table>
+  <caption> Employee List</caption>
+  <tr>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Title</th>
+    <th>Salary</th>
+    <th>City</th>
+    <th>Update</th>
+    <th>Delete</th>
+  </tr>
+  <tr *ngFor="let employee of employees; trackBy: trackByFn; ">
+    <td>{{ employee.id }}</td>
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.title }}</td>
+    <td>{{ employee.salary | number }}</td>
+    <td>{{ employee.city }}</td>
+    <td><button type="button" (click)='doEdit(employee)' class="update" style="width:80px">Edit</button></td>
+    <td><button type="button" (click)='doDelete(employee.id)' class="delete" style="width:80px">Delete</button></td>
+  </tr>
+  </table>

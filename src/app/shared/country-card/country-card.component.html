@@ -1,0 +1,29 @@
+
+<ng-container *ngIf="isLoading">
+  <div class="loader"></div>
+</ng-container>
+<section class="cardContainer" *ngIf="country">
+  <span class="cardTitleText">{{ country?.name }}</span>
+    <div class="flagIconContainer" >
+     <img [src]="country?.flag" height="200" width="300" >
+    </div>
+    <div>
+        <span class="label-black">Captial :</span>
+        <span class="dataTex-blackt">{{ country?.capital }}</span>
+    </div>
+    <div>
+        <span class="label-black">Region :</span>
+        <span class="dataText-black">{{ country?.region }}</span>
+    </div>
+    <div>
+      <span class="label-black">Population :</span>
+      <span class="dataText-black">{{ country?.population | number }}</span>
+  </div>
+  <div>
+      <span class="label-black">Currency :</span>
+      <span class="dataText-black">{{ country?.currency }}</span>
+  </div>
+</section>
+<div *ngIf="errorMessage" class="alert-error">
+ {{ errorMessage }}
+</div>

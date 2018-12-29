@@ -1,0 +1,17 @@
+
+<div style="text-align:center">
+  <h3>Demo 4</h3>
+</div>
+
+<div class ="searchContainer" >
+  <input [formControl]="searchControl"  type="search"  id="searchbyCountry"  placeholder="Search Country" >
+</div>
+
+
+<app-country-table
+[countries]="countries$ | async"
+[errorMessage]="errorMessage$ | async"
+[isLoading]="isLoading$ | async" >
+</app-country-table>
+
+

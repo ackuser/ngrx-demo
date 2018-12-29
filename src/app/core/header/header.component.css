@@ -1,0 +1,31 @@
+.mainHeader {
+  width: 100%;
+  display: grid;
+  grid-gap: 2px;
+  grid-template-columns: 300px 100px 150px 150px 120px 170px 170px 150px;
+  grid-template-rows: 1fr;
+  box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
+  height: 4rem;
+  margin: 0;
+  align-items: center;
+  background-color: #253b56;
+  color: white;
+}
+
+.logoText {
+  letter-spacing: 0.1rem;
+  display: inline;
+  margin: 0.5rem 0;
+  padding-left: 6px;
+}
+
+.menuText {
+  letter-spacing: 0.1rem;
+  display: inline;
+  margin: 0.5rem 0;
+}
+
+.menuText a:hover {
+  cursor:pointer;
+	cursor:hand;
+}

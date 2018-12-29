@@ -1,0 +1,25 @@
+<div style="text-align:center">
+  <h3>Demo 1</h3>
+</div>
+<div>
+<h2>{{ message$ | async }}</h2>
+  <button (click)="translateInEnglish()">English</button>
+  <span class="space"></span>
+  <button (click)="translateInSpanish()">Spanish</button>
+  <span class="space"></span>
+  <button (click)="resetMessage()">Reset Message</button>
+</div>
+<br><br>
+<div>
+  <h2>{{ status$ | async}}</h2>
+  <button (click)="on()">ON</button>
+  <span class="space"></span>
+  <button (click)="off()">OFF</button>
+  <span class="space"></span>
+  <button (click)="resetSwitch()">Reset Switch</button>
+</div>
+<br><br>
+<div>
+  <h5>Click Log Out to clear the store to default state. Verify using Redux Dev Tool</h5>
+  <button (click)="logOut()">Log Out</button>
+</div>

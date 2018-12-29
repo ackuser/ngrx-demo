@@ -1,0 +1,37 @@
+<form novalidate (ngSubmit)="doAdd()" [formGroup]="crudForm">
+
+  <label for="name">Name</label>
+  <input id="name" type="text" placeholder="Name (required)"
+  formControlName="name">
+  <div class='validation-error' *ngIf="name.invalid && name.touched">{{ getNameControlErrorMessage() }}</div>
+  <br>
+
+  <label for="title">Title</label>
+  <input id="title" type="text" placeholder="Title (required)"
+  formControlName="title">
+  <div class='validation-error' *ngIf="title.invalid && title.touched">{{ getTitleControlErrorMessage() }}</div>
+  <br>
+
+  <label for="salary">Salary</label>
+  <input id="salary" type="text" placeholder="Salary (required)"
+  formControlName="salary">
+  <div class='validation-error' *ngIf="salary.invalid && salary.touched">{{ getSalaryControlErrorMessage() }}</div>
+  <br>
+
+  <label for="city">City</label>
+  <input id="city" type="text" placeholder="City (required)"
+  formControlName="city">
+  <div class='validation-error' *ngIf="city.invalid && city.touched">{{ getCityControlErrorMessage() }}</div>
+  <br><br>
+
+  <div *ngIf="!isEditing;  else edit">
+    <button type="submit" [disabled]='!crudForm.valid' style="width:80px">Add</button>&nbsp;&nbsp;
+    <button type="button" (click)='crudForm.reset()' style="width:80px">Reset</button>
+  </div>
+
+  <ng-template #edit>
+    <button type="button" (click)='doUpdate()' [disabled]='!crudForm.valid' class="update" style="width:80px">Update</button>&nbsp;&nbsp;
+    <button type="button" (click)='doCancel()' style="width:80px">Cancel</button>
+  </ng-template>
+
+</form>
