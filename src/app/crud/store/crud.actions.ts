@@ -22,12 +22,12 @@ export class CRUDEmployeeLoadSuccess implements Action {
   constructor(public payload: Employee[]) {}
 }
 
-export class CRUDEmployeeCreate implements Action {
+export class CRUDEmployeeCreateRequest implements Action {
   readonly type = ActionTypes.CRUD_EMPLOYEE_CREATE_REQUEST;
   constructor(public payload: Employee) {}
 }
 
-export class CRUDEmployeeUpdate implements Action {
+export class CRUDEmployeeUpdateRequest implements Action {
   readonly type = ActionTypes.CRUD_EMPLOYEE_UPDATE_REQUEST;
   constructor(public payload: Employee) {}
 }
@@ -55,8 +55,8 @@ export class CRUDEmployeeFailure implements Action {
 export type Union
 = CRUDEmployeeLoadRequest
 | CRUDEmployeeLoadSuccess
-| CRUDEmployeeCreate
-| CRUDEmployeeUpdate
+| CRUDEmployeeCreateRequest
+| CRUDEmployeeUpdateRequest
 | CRUDEmployeeCreateOrUpdateSuccess
 | CRUDEmployeeDeleteRequest
 | CRUDEmployeeDeleteSuccess

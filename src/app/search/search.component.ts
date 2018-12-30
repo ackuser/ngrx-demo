@@ -51,7 +51,7 @@ export class SearchComponent implements OnInit {
         distinctUntilChanged()
       )
       .subscribe((searchKey) => {
-        this.store$.dispatch(new SearchStoreActions.SearchCountries(searchKey));
+        this.store$.dispatch(new SearchStoreActions.SearchCountriesRequest(searchKey));
       });
   }
 

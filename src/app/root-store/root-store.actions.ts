@@ -1,7 +1,7 @@
 import { Action } from '@ngrx/store';
 
 export enum ActionTypes {
-  LOG_OUT = '[ Application ] Logout to clear application store'
+  LOG_OUT = '[ Application ] Logout to Clear Application Store'
 }
 
 export class Logout implements Action {

@@ -20,7 +20,7 @@ export class SideEffectsComponent implements OnInit {
 
   ngOnInit() {
 
-    this.store$.dispatch(new SideEffectsStoreActions.RetrieveCountry('USA'));
+    this.store$.dispatch(new SideEffectsStoreActions.RetrieveCountryRequest('USA'));
 
     this.isLoading$ = this.store$.pipe(
       select(SideEffectsStoreSelectors.selectIsLoading)
@@ -36,7 +36,7 @@ export class SideEffectsComponent implements OnInit {
   }
 
   public populateCountryDetail(countryName: string) {
-    this.store$.dispatch(new SideEffectsStoreActions.RetrieveCountry(countryName));
+    this.store$.dispatch(new SideEffectsStoreActions.RetrieveCountryRequest(countryName));
   }
 
 }

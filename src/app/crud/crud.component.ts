@@ -24,7 +24,7 @@ export class CrudComponent implements OnInit {
 
   ngOnInit() {
 
-    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeLoad());
+    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeLoadRequest());
 
     this.isLoading$ = this.store$.pipe(
       select(CrudStoreSelectors.selectCrudLoadingStatus)
@@ -41,11 +41,11 @@ export class CrudComponent implements OnInit {
 
   public onAddEmployee(employee: Employee) {
     employee.id = null;
-    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeCreate(employee));
+    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeCreateRequest(employee));
   }
 
   public onUpdateEmployee(employee: Employee) {
-    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeUpdate(employee));
+    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeUpdateRequest(employee));
   }
 
   public onEditEmployee(employee: Employee) {
@@ -54,7 +54,7 @@ export class CrudComponent implements OnInit {
   }
 
   public onDeleteEmployee(id: number | null) {
-    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeDelete(id));
+    this.store$.dispatch(new CrudStoreActions.CRUDEmployeeDeleteRequest(id));
   }
 
   public onCancel(isEdit: boolean) {

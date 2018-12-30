@@ -22,20 +22,20 @@ export class Crud2StoreFacade {
 
   // NGRX Action dispatchers available for components to dispatch actions
   public loadAllEmployee() {
-    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeLoad());
+    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeLoadRequest());
   }
 
   public addEmployee(employee: Employee) {
     employee.id = null;
-    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeCreate(employee));
+    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeCreateRequest(employee));
   }
 
   public updateEmployee(employee: Employee) {
-    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeUpdate(employee));
+    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeUpdateRequest(employee));
   }
 
   public deleteEmployee(id: number | null) {
-    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeDelete(id));
+    this.store$.dispatch(new Crud2StoreActions.CRUD2EmployeeDeleteRequest(id));
   }
 
 }
