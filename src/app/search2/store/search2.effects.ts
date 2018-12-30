@@ -17,7 +17,7 @@ export class Search2Effects {
 
   @Effect()
   search2CountriesEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<search2Actions.Search2Countries>(search2Actions.ActionTypes.SEARCH2_COUNTRIES),
+    ofType<search2Actions.Search2Countries>(search2Actions.ActionTypes.SEARCH2_COUNTRIES_REQUEST),
     map((action: search2Actions.Search2Countries) => action.payload),
     switchMap((searchKey: string) =>
       this.countryService.getCountries(searchKey).pipe(

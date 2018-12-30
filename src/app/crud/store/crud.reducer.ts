@@ -4,10 +4,10 @@ import { ActionTypes, Union } from './crud.actions';
 export function crudReducer(state = initialState, action: Union): CrudState {
   switch (action.type) {
 
-    case ActionTypes.CRUD_EMPLOYEE_LOAD:
-    case ActionTypes.CRUD_EMPLOYEE_CREATE:
-    case ActionTypes.CRUD_EMPLOYEE_UPDATE:
-    case ActionTypes.CRUD_EMPLOYEE_DELETE:
+    case ActionTypes.CRUD_EMPLOYEE_LOAD_REQUEST:
+    case ActionTypes.CRUD_EMPLOYEE_CREATE_REQUEST:
+    case ActionTypes.CRUD_EMPLOYEE_UPDATE_REQUEST:
+    case ActionTypes.CRUD_EMPLOYEE_DELETE_REQUEST:
     {
       return {
         ...state,

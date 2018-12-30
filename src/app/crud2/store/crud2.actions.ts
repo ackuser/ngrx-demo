@@ -2,18 +2,18 @@ import { Action } from '@ngrx/store';
 import { Employee } from './../../core/services/employee.model';
 
 export enum ActionTypes {
-  CRUD2_EMPLOYEE_LOAD = '[CRUD2 Page] Load Employees',
-  CRUD2_EMPLOYEE_LOAD_SUCCESS = '[CRUD2 Page] Success Employee Load Transaction',
-  CRUD2_EMPLOYEE_CREATE = '[CRUD2 Page] Create Employee',
-  CRUD2_EMPLOYEE_UPDATE = '[CRUD2 Page] Update Employee',
-  CRUD2_EMPLOYEE_CREATE_UPDATE_SUCCESS = '[CRUD2 Page] Success Create or Update Employee',
-  CRUD2_EMPLOYEE_DELETE = '[CRUD2 Page] Delete Employee',
-  CRUD2_EMPLOYEE_DELETE_SUCCESS = '[CRUD2 Page] Success Delete Employee',
-  CRUD2_EMPLOYEE_FAILURE = '[CRUD2 Page] Failure Employee Transaction'
+  CRUD2_EMPLOYEE_LOAD_REQUEST = '[CRUD2 Page] Load Employee Request',
+  CRUD2_EMPLOYEE_LOAD_SUCCESS = '[CRUD2 Page] Load Employee Success',
+  CRUD2_EMPLOYEE_CREATE_REQUEST = '[CRUD2 Page] Create Employee Request',
+  CRUD2_EMPLOYEE_UPDATE_REQUEST = '[CRUD2 Page] Update Employee Request',
+  CRUD2_EMPLOYEE_CREATE_UPDATE_SUCCESS = '[CRUD2 Page] Create or Update Employee Success',
+  CRUD2_EMPLOYEE_DELETE_REQUEST = '[CRUD2 Page] Delete Employee Request',
+  CRUD2_EMPLOYEE_DELETE_SUCCESS = '[CRUD2 Page] Delete Employee Success',
+  CRUD2_EMPLOYEE_FAILURE = '[CRUD2 Page] Employee Failure'
 }
 
 export class CRUD2EmployeeLoad implements Action {
-  readonly type = ActionTypes.CRUD2_EMPLOYEE_LOAD;
+  readonly type = ActionTypes.CRUD2_EMPLOYEE_LOAD_REQUEST;
   constructor() {}
 }
 
@@ -23,12 +23,12 @@ export class CRUD2EmployeeLoadSuccess implements Action {
 }
 
 export class CRUD2EmployeeCreate implements Action {
-  readonly type = ActionTypes.CRUD2_EMPLOYEE_CREATE;
+  readonly type = ActionTypes.CRUD2_EMPLOYEE_CREATE_REQUEST;
   constructor(public payload: Employee) {}
 }
 
 export class CRUD2EmployeeUpdate implements Action {
-  readonly type = ActionTypes.CRUD2_EMPLOYEE_UPDATE;
+  readonly type = ActionTypes.CRUD2_EMPLOYEE_UPDATE_REQUEST;
   constructor(public payload: Employee) {}
 }
 
@@ -38,7 +38,7 @@ export class CRUD2EmployeeCreateOrUpdateSuccess implements Action {
 }
 
 export class CRUD2EmployeeDelete implements Action {
-  readonly type = ActionTypes.CRUD2_EMPLOYEE_DELETE;
+  readonly type = ActionTypes.CRUD2_EMPLOYEE_DELETE_REQUEST;
   constructor(public payload: number) {}
 }
 

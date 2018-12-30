@@ -2,13 +2,13 @@ import { Action } from '@ngrx/store';
 import { Country } from '../../core/services/country.model';
 
 export enum ActionTypes {
-  SEARCH_COUNTRIES = '[Search Page] Search Countries',
+  SEARCH_COUNTRIES_REQUEST = '[Search Page] Search Countries Request',
   SEARCH_COUNTRIES_SUCCESS = '[Search Page] Search Countries Success',
   SEARCH_COUNTRIES_FAILURE = '[Search Page] Search Countries Failure'
 }
 
 export class SearchCountries implements Action {
-  readonly type = ActionTypes.SEARCH_COUNTRIES;
+  readonly type = ActionTypes.SEARCH_COUNTRIES_REQUEST;
   constructor(public payload: string) {}
 }
 

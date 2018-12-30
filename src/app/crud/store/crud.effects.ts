@@ -17,7 +17,7 @@ export class CrudEffects {
 
   @Effect()
   loadAllEmployeeEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<crudActions.CRUDEmployeeLoad>(crudActions.ActionTypes.CRUD_EMPLOYEE_LOAD),
+    ofType<crudActions.CRUDEmployeeLoad>(crudActions.ActionTypes.CRUD_EMPLOYEE_LOAD_REQUEST),
     switchMap(() =>
       this.employeeService.getEmployees().pipe(
         map((employees: Employee[]) => (new crudActions.CRUDEmployeeLoadSuccess(employees))),
@@ -28,7 +28,7 @@ export class CrudEffects {
 
   @Effect()
   createEmployeeEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<crudActions.CRUDEmployeeCreate>(crudActions.ActionTypes.CRUD_EMPLOYEE_CREATE),
+    ofType<crudActions.CRUDEmployeeCreate>(crudActions.ActionTypes.CRUD_EMPLOYEE_CREATE_REQUEST),
     map((action: crudActions.CRUDEmployeeCreate) => action.payload),
     switchMap((employee: Employee) =>
       this.employeeService.createEmployee(employee).pipe(
@@ -40,7 +40,7 @@ export class CrudEffects {
 
   @Effect()
   updateEmployeeEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<crudActions.CRUDEmployeeUpdate>(crudActions.ActionTypes.CRUD_EMPLOYEE_UPDATE),
+    ofType<crudActions.CRUDEmployeeUpdate>(crudActions.ActionTypes.CRUD_EMPLOYEE_UPDATE_REQUEST),
     map((action: crudActions.CRUDEmployeeUpdate) => action.payload),
     switchMap((employee: Employee) =>
       this.employeeService.updateEmployee(employee).pipe(
@@ -52,7 +52,7 @@ export class CrudEffects {
 
  @Effect()
   deleteEmployeeEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<crudActions.CRUDEmployeeDelete>(crudActions.ActionTypes.CRUD_EMPLOYEE_DELETE),
+    ofType<crudActions.CRUDEmployeeDelete>(crudActions.ActionTypes.CRUD_EMPLOYEE_DELETE_REQUEST),
     map((action: crudActions.CRUDEmployeeDelete) => action.payload),
     switchMap((id: number) =>
       this.employeeService.removeEmployee(id).pipe(

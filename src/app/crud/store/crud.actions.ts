@@ -2,18 +2,18 @@ import { Action } from '@ngrx/store';
 import { Employee } from './../../core/services/employee.model';
 
 export enum ActionTypes {
-  CRUD_EMPLOYEE_LOAD = '[CRUD Page] Load Employees',
-  CRUD_EMPLOYEE_LOAD_SUCCESS = '[CRUD Page] Success Employee Load Transaction',
-  CRUD_EMPLOYEE_CREATE = '[CRUD Page] Create Employee',
-  CRUD_EMPLOYEE_UPDATE = '[CRUD Page] Update Employee',
-  CRUD_EMPLOYEE_CREATE_UPDATE_SUCCESS = '[CRUD Page] Success Create or Update Employee',
-  CRUD_EMPLOYEE_DELETE = '[CRUD Page] Delete Employee',
-  CRUD_EMPLOYEE_DELETE_SUCCESS = '[CRUD Page] Success Delete Employee',
-  CRUD_EMPLOYEE_FAILURE = '[CRUD Page] Failure Employee Transaction'
+  CRUD_EMPLOYEE_LOAD_REQUEST = '[CRUD Page] Load Employee Request',
+  CRUD_EMPLOYEE_LOAD_SUCCESS = '[CRUD Page] Load Employee Success',
+  CRUD_EMPLOYEE_CREATE_REQUEST = '[CRUD Page] Create Employee Request',
+  CRUD_EMPLOYEE_UPDATE_REQUEST = '[CRUD Page] Update Employee Request',
+  CRUD_EMPLOYEE_CREATE_UPDATE_SUCCESS = '[CRUD Page] Create or Update Employee Success',
+  CRUD_EMPLOYEE_DELETE_REQUEST = '[CRUD Page] Delete Employee Request',
+  CRUD_EMPLOYEE_DELETE_SUCCESS = '[CRUD Page] Delete Employee Success',
+  CRUD_EMPLOYEE_FAILURE = '[CRUD Page] Employee Failure'
 }
 
 export class CRUDEmployeeLoad implements Action {
-  readonly type = ActionTypes.CRUD_EMPLOYEE_LOAD;
+  readonly type = ActionTypes.CRUD_EMPLOYEE_LOAD_REQUEST;
   constructor() {}
 }
 
@@ -23,12 +23,12 @@ export class CRUDEmployeeLoadSuccess implements Action {
 }
 
 export class CRUDEmployeeCreate implements Action {
-  readonly type = ActionTypes.CRUD_EMPLOYEE_CREATE;
+  readonly type = ActionTypes.CRUD_EMPLOYEE_CREATE_REQUEST;
   constructor(public payload: Employee) {}
 }
 
 export class CRUDEmployeeUpdate implements Action {
-  readonly type = ActionTypes.CRUD_EMPLOYEE_UPDATE;
+  readonly type = ActionTypes.CRUD_EMPLOYEE_UPDATE_REQUEST;
   constructor(public payload: Employee) {}
 }
 
@@ -38,7 +38,7 @@ export class CRUDEmployeeCreateOrUpdateSuccess implements Action {
 }
 
 export class CRUDEmployeeDelete implements Action {
-  readonly type = ActionTypes.CRUD_EMPLOYEE_DELETE;
+  readonly type = ActionTypes.CRUD_EMPLOYEE_DELETE_REQUEST;
   constructor(public payload: number) {}
 }
 

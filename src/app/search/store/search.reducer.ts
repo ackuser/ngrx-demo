@@ -4,7 +4,7 @@ import { ActionTypes, Union } from './search.actions';
 export function searchReducer(state = initialState, action: Union): SearchState {
   switch (action.type) {
 
-    case ActionTypes.SEARCH_COUNTRIES:
+    case ActionTypes.SEARCH_COUNTRIES_REQUEST:
       return {
         ...state,
         isLoading: true,
