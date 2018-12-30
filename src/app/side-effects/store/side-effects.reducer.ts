@@ -4,7 +4,7 @@ import { ActionTypes, Union } from './side-effects.actions';
 export function sideEffectsReducer(state = initialState, action: Union): SideEffectsState {
   switch (action.type) {
 
-    case ActionTypes.RETRIEVE_COUNTRY:
+    case ActionTypes.RETRIEVE_COUNTRY_REQUEST:
       return {
         ...state,
         isLoading: true,

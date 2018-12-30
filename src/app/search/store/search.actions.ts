@@ -7,7 +7,7 @@ export enum ActionTypes {
   SEARCH_COUNTRIES_FAILURE = '[Search Page] Search Countries Failure'
 }
 
-export class SearchCountries implements Action {
+export class SearchCountriesRequest implements Action {
   readonly type = ActionTypes.SEARCH_COUNTRIES_REQUEST;
   constructor(public payload: string) {}
 }
@@ -23,6 +23,6 @@ export class SearchCountriesFailure implements Action {
 }
 
 export type Union
-= SearchCountries
+= SearchCountriesRequest
 | SearchCountriesSuccess
 | SearchCountriesFailure;

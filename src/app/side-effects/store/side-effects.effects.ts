@@ -17,8 +17,8 @@ export class SideEffectsEffects {
 
   @Effect()
   retrieveCountryEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<sideEffectsActions.RetrieveCountry>(sideEffectsActions.ActionTypes.RETRIEVE_COUNTRY),
-    map((action: sideEffectsActions.RetrieveCountry) => action.payload),
+    ofType<sideEffectsActions.RetrieveCountryRequest>(sideEffectsActions.ActionTypes.RETRIEVE_COUNTRY_REQUEST),
+    map((action: sideEffectsActions.RetrieveCountryRequest) => action.payload),
     switchMap((countryName: string) =>
       this.countryService.getCountryDetail(countryName).pipe(
         map((country: Country) => (new sideEffectsActions.RetrieveCountrySuccess(country))),

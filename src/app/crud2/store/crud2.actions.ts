@@ -12,7 +12,7 @@ export enum ActionTypes {
   CRUD2_EMPLOYEE_FAILURE = '[CRUD2 Page] Employee Failure'
 }
 
-export class CRUD2EmployeeLoad implements Action {
+export class CRUD2EmployeeLoadRequest implements Action {
   readonly type = ActionTypes.CRUD2_EMPLOYEE_LOAD_REQUEST;
   constructor() {}
 }
@@ -37,7 +37,7 @@ export class CRUD2EmployeeCreateOrUpdateSuccess implements Action {
   constructor(public payload: Employee) {}
 }
 
-export class CRUD2EmployeeDelete implements Action {
+export class CRUD2EmployeeDeleteRequest implements Action {
   readonly type = ActionTypes.CRUD2_EMPLOYEE_DELETE_REQUEST;
   constructor(public payload: number) {}
 }
@@ -53,11 +53,11 @@ export class CRUD2EmployeeFailure implements Action {
 }
 
 export type Union
-= CRUD2EmployeeLoad
+= CRUD2EmployeeLoadRequest
 | CRUD2EmployeeLoadSuccess
 | CRUD2EmployeeCreate
 | CRUD2EmployeeUpdate
 | CRUD2EmployeeCreateOrUpdateSuccess
-| CRUD2EmployeeDelete
+| CRUD2EmployeeDeleteRequest
 | CRUD2EmployeeDeleteSuccess
 | CRUD2EmployeeFailure;

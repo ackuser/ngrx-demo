@@ -17,7 +17,7 @@ export class Crud2Effects {
 
   @Effect()
   loadAllEmployeeEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<crud2Actions.CRUD2EmployeeLoad>(crud2Actions.ActionTypes.CRUD2_EMPLOYEE_LOAD_REQUEST),
+    ofType<crud2Actions.CRUD2EmployeeLoadRequest>(crud2Actions.ActionTypes.CRUD2_EMPLOYEE_LOAD_REQUEST),
     switchMap(() =>
       this.employeeService.getEmployees().pipe(
         map((employees: Employee[]) => (new crud2Actions.CRUD2EmployeeLoadSuccess(employees))),
@@ -52,8 +52,8 @@ export class Crud2Effects {
 
  @Effect()
   deleteEmployeeEffects$: Observable<Action> = this.actions$.pipe(
-    ofType<crud2Actions.CRUD2EmployeeDelete>(crud2Actions.ActionTypes.CRUD2_EMPLOYEE_DELETE_REQUEST),
-    map((action: crud2Actions.CRUD2EmployeeDelete) => action.payload),
+    ofType<crud2Actions.CRUD2EmployeeDeleteRequest>(crud2Actions.ActionTypes.CRUD2_EMPLOYEE_DELETE_REQUEST),
+    map((action: crud2Actions.CRUD2EmployeeDeleteRequest) => action.payload),
     switchMap((id: number) =>
       this.employeeService.removeEmployee(id).pipe(
         map(() => (new crud2Actions.CRUD2EmployeeDeleteSuccess(id))),
