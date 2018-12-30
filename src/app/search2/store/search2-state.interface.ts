@@ -6,7 +6,7 @@ import * as fromRoot from '../../root-store';
 export interface Search2State extends EntityState<Country> {
   // additional entities state properties goes here
   isLoading: boolean;
-  error?: string;
+  error?: string | null;
 }
 // Method to select primary key. if primary key is 'id' then this is not needed
 export function selectCountryId(country: Country): string {

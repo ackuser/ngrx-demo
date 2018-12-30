@@ -6,7 +6,7 @@ import * as fromRoot from './../../root-store';
 export interface Crud2State extends EntityState<Employee> {
   // additional entities state properties goes here
   isLoading: boolean;
-  error?: string;
+  error?: string | null;
 }
 // Note: Since  primary key is 'id', Method to select primary key is not needed
 // unlike we did it for demo 5

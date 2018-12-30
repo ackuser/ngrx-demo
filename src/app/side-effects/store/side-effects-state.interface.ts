@@ -5,7 +5,7 @@ import { Country } from './../../core/services/country.model';
 export interface SideEffectsState {
   country?: Country | null;
   isLoading: boolean;
-  error?: string;
+  error?: string | null;
 }
 
 // Extends the global state to include the side-effects feature.

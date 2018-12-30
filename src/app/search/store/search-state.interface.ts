@@ -5,7 +5,7 @@ import * as fromRoot from './../../root-store';
 export interface SearchState {
   countries?: Country[] | [];
   isLoading: boolean;
-  error?: string;
+  error?: string | null;
 }
 
 // Extends the global state to include the search feature.
