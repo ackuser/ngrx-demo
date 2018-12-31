@@ -1,5 +1,6 @@
 import { Action } from '@ngrx/store';
 import { Employee } from './../../core/services/employee.model';
+import { isActionNameUnique } from './../../root-store';
 
 export enum ActionTypes {
   CRUD2_EMPLOYEE_LOAD_REQUEST = '[CRUD2 Page] Load Employee Request',
@@ -11,6 +12,10 @@ export enum ActionTypes {
   CRUD2_EMPLOYEE_DELETE_SUCCESS = '[CRUD2 Page] Delete Employee Success',
   CRUD2_EMPLOYEE_FAILURE = '[CRUD2 Page] Employee Failure'
 }
+
+// To ensure NgRX actions have unique names across the application.
+// This prevents any duplicate actions being dispatched.
+isActionNameUnique(ActionTypes);
 
 export class CRUD2EmployeeLoadRequest implements Action {
   readonly type = ActionTypes.CRUD2_EMPLOYEE_LOAD_REQUEST;

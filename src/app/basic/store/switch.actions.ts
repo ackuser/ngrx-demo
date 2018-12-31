@@ -1,10 +1,15 @@
 import { Action } from '@ngrx/store';
+import { isActionNameUnique } from './../../root-store';
 
 export enum ActionTypes {
   ON = '[Basic Page] ON Switch',
   OFF = '[Basic Page] OFF Switch',
   RESET = '[Basic Page] Reset Switch'
 }
+
+// To ensure NgRX actions have unique names across the application.
+// This prevents any duplicate actions being dispatched.
+isActionNameUnique(ActionTypes);
 
 export class SwitchON implements Action {
   readonly type = ActionTypes.ON;

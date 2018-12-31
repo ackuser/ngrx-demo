@@ -1,11 +1,16 @@
 import { Action } from '@ngrx/store';
 import { Country } from '../../core/services/country.model';
+import { isActionNameUnique } from './../../root-store';
 
 export enum ActionTypes {
   SEARCH2_COUNTRIES_REQUEST = '[Search2 Page] Search Countries Request',
   SEARCH2_COUNTRIES_SUCCESS = '[Search2 Page] Search Countries Success',
   SEARCH2_COUNTRIES_FAILURE = '[Search2 Page] Search Countries Failure'
 }
+
+// To ensure NgRX actions have unique names across the application.
+// This prevents any duplicate actions being dispatched.
+isActionNameUnique(ActionTypes);
 
 export class Search2CountriesRequest implements Action {
   readonly type = ActionTypes.SEARCH2_COUNTRIES_REQUEST;
