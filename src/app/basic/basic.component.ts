@@ -56,7 +56,7 @@ export class BasicComponent implements OnInit {
   }
 
   logOut() {
-    this.store$.dispatch(new fromRoot.RootStoreActions.Logout());
+    this.store$.dispatch(new fromRoot.RootStoreActions.LogoutToHome());
   }
 
 }

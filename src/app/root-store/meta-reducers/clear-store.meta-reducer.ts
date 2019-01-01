@@ -8,7 +8,7 @@ import { ActionTypes, Union } from '../root-store.actions';
 // therefore all of the reducers will return the initial value as they are supposed to.
 export function clearStoreMetaReducer(reducer: ActionReducer<State>): ActionReducer<State> {
   return (state: State, action: Union): any => {
-    if ( action.type === ActionTypes.LOG_OUT ) {
+    if ( action.type === ActionTypes.LOG_OUT_TO_CLEAR_STORE ) {
       state = undefined;
     }
     const nextState = reducer(state, action);

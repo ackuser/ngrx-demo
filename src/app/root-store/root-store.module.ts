@@ -6,6 +6,7 @@ import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from '../../environments/environment';
 import { metaReducers, reducers } from './root-store-state.interface';
+import { RootStoreEffects } from './root-store.effects';
 import { CustomSerializer } from './router-store/custom-serializer';
 
 @NgModule({
@@ -29,7 +30,7 @@ import { CustomSerializer } from './router-store/custom-serializer';
      * sets up the effects class to be initialized immediately when the
      * application starts.
      */
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([RootStoreEffects]),
     /**
      * Store devtools instrument the store retaining past versions of state
      * and recalculating new states. This enables powerful time-travel

@@ -1,12 +1,23 @@
 import { Action } from '@ngrx/store';
+import { isActionNameUnique } from './action-unique';
 
 export enum ActionTypes {
-  LOG_OUT = '[ Application ] Logout to Clear Application Store'
+  LOG_OUT_TO_CLEAR_STORE = '[ Application ] Logout to Clear Application Store',
+  LOG_OUT_TO_HOME = '[ Application ] Logout to Redirect User to Home Page'
 }
 
-export class Logout implements Action {
-  readonly type = ActionTypes.LOG_OUT;
+isActionNameUnique(ActionTypes);
+export class LogoutToClearStore implements Action {
+  readonly type = ActionTypes.LOG_OUT_TO_CLEAR_STORE;
   constructor() {}
 }
 
-export type Union = Logout;
+export class LogoutToHome implements Action {
+  readonly type = ActionTypes.LOG_OUT_TO_HOME;
+  constructor() {}
+}
+
+export type Union
+= LogoutToClearStore
+| LogoutToHome;
+
