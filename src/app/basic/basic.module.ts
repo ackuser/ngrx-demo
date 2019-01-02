@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { SharedModule } from '../shared/shared.module';
@@ -7,7 +6,6 @@ import { BasicStoreState } from './store';
 
 @NgModule({
   imports: [
-    CommonModule,
     SharedModule,
      /**
      * StoreModule.forFeature is imported in this feature module, accepting a reducer
@@ -18,7 +16,7 @@ import { BasicStoreState } from './store';
      * which manages feature state
      */
     StoreModule.forFeature('basic', BasicStoreState.basicReducers),
-    BasicRoutingModule
+    BasicRoutingModule // always import routing module as the last imported module
   ],
   declarations: [ BasicRoutingModule.components ]
 })

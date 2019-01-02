@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
@@ -8,7 +7,6 @@ import { SideEffectsEffects, sideEffectsReducer } from './store';
 
 @NgModule({
   imports: [
-    CommonModule,
     SharedModule,
      /**
      * StoreModule.forFeature is imported in this feature module, accepting a reducer

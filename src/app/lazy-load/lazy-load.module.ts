@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { StoreModule } from '@ngrx/store';
 import { SharedModule } from '../shared/shared.module';
@@ -8,7 +7,6 @@ import { lazyLoadReducer } from './store';
 @NgModule({
   declarations: [LazyLoadRoutingModule.components],
   imports: [
-    CommonModule,
     SharedModule,
       /**
      * StoreModule.forFeature is imported in this feature module, accepting a reducer

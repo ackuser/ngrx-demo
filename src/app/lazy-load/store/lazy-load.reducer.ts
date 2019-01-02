@@ -11,8 +11,6 @@ export function lazyLoadReducer(state = initialState, action: Union): LazyLoadSt
       };
 
     case ActionTypes.SPANISH:
-    /* state.message = 'Hola Mundo';
-     return state; */
       return {
         ...state,
         message: 'Hola Mundo'

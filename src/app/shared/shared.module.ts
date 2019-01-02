@@ -5,6 +5,7 @@ import { CountryCardComponent } from './country-card/country-card.component';
 import { CountryTableComponent } from './country-table/country-table.component';
 import { EmployeeFormComponent } from './employee-form/employee-form.component';
 import { EmployeeTableComponent } from './employee-table/employee-table.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -17,11 +18,12 @@ import { EmployeeTableComponent } from './employee-table/employee-table.componen
     EmployeeTableComponent
   ],
   exports: [
+    CommonModule,
     ReactiveFormsModule,
     CountryCardComponent,
     CountryTableComponent,
     EmployeeFormComponent,
     EmployeeTableComponent
-  ],
+  ]
 })
 export class SharedModule { }

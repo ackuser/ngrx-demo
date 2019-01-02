@@ -1,4 +1,3 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
@@ -8,7 +7,6 @@ import { CrudEffects, crudReducer } from './store';
 
 @NgModule({
   imports: [
-    CommonModule,
     SharedModule,
     StoreModule.forFeature('crud', crudReducer),
     EffectsModule.forFeature(
