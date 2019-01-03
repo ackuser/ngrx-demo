@@ -18,7 +18,7 @@ export class RootStoreEffects {
   @Effect()
   logOutUserEffects$: Observable<Action> = this.actions$.pipe(
     ofType<rootStoreActions.LogoutToHome>(rootStoreActions.ActionTypes.LOG_OUT_TO_HOME),
-    tap(() => { this.router.navigate(['search']); }),
+    tap(() => { this.router.navigate(['basic']); }),
     map(() => (new rootStoreActions.LogoutToClearStore()))
   );
 

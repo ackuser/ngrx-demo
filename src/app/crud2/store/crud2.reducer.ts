@@ -25,7 +25,7 @@ export function crud2Reducer(state = initialState, action: Union): Crud2State {
       });
     }
 
-    case ActionTypes.CRUD2_EMPLOYEE_CREATE_UPDATE_SUCCESS:
+    case ActionTypes.CRUD2_EMPLOYEE_CREATE_OR_UPDATE_SUCCESS:
     {
       return crudEntityadapter.upsertOne(action.payload, {
         ...state,

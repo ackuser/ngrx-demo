@@ -7,7 +7,7 @@ export enum ActionTypes {
   CRUD2_EMPLOYEE_LOAD_SUCCESS = '[CRUD2 Page] Load Employee Success',
   CRUD2_EMPLOYEE_CREATE_REQUEST = '[CRUD2 Page] Create Employee Request',
   CRUD2_EMPLOYEE_UPDATE_REQUEST = '[CRUD2 Page] Update Employee Request',
-  CRUD2_EMPLOYEE_CREATE_UPDATE_SUCCESS = '[CRUD2 Page] Create or Update Employee Success',
+  CRUD2_EMPLOYEE_CREATE_OR_UPDATE_SUCCESS = '[CRUD2 Page] Create or Update Employee Success',
   CRUD2_EMPLOYEE_DELETE_REQUEST = '[CRUD2 Page] Delete Employee Request',
   CRUD2_EMPLOYEE_DELETE_SUCCESS = '[CRUD2 Page] Delete Employee Success',
   CRUD2_EMPLOYEE_FAILURE = '[CRUD2 Page] Employee Failure'
@@ -38,7 +38,7 @@ export class CRUD2EmployeeUpdateRequest implements Action {
 }
 
 export class CRUD2EmployeeCreateOrUpdateSuccess implements Action {
-  readonly type = ActionTypes.CRUD2_EMPLOYEE_CREATE_UPDATE_SUCCESS;
+  readonly type = ActionTypes.CRUD2_EMPLOYEE_CREATE_OR_UPDATE_SUCCESS;
   constructor(public payload: Employee) {}
 }
 
