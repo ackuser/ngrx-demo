@@ -28,7 +28,8 @@
 
 #### Features
 
-* Upgraded NgRx from v6.x to v7.x
+* Upgraded NgRx from v6.1.x to v7.x.x
+**Note:** 👉For demo with NgRx v6.x code changes, refer the branch [ngrx-6.1](https://github.com/kumaran-is/ngrx-demo/tree/ngrx-6.1)
 
 #### Breaking Changes
 * NA
