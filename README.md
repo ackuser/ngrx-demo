@@ -10,7 +10,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 2. [Quick Start](#quick-start)
 3. [Demo UI](#demo-ui)
 4. [Build Tasks and Commands](#build-tasks-and-commands)
-5. [References](#references)
+5. [Changelog](#changelog)
+6. [References](#references)
 
 ## Prerequisites and Installation
 
@@ -110,6 +111,10 @@ Demo UI screen is organized into 7 pages with separate menus in the top navigati
  1. Integrated Redux DevTools provided by NGRX library `@ngrx/store-devtools` to monitor and debug store in non-production environments using [Google Chrome Redux DevTools Plugin](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en) or [Firefox Redux DevTools Extension](https://addons.mozilla.org/en-US/firefox/addon/reduxdevtools/).
 
  1. Implemented smart(container) and dump(presentation) component pattern with NgRx to optimize page rendering using Angular `OnPush` ChangeDetectionStrategy
+
+## Changelog
+
+[Follow this link for change history](./CHANGELOG.md)
 
 ## References
 
