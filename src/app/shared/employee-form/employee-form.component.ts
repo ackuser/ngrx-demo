@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Employee } from '../../core/services/employee.model';
 import { CoreConstants } from './../../core/core.constants';
+import { Employee } from './../../in-memory-api/employee.interface';
 
 
 @Component({

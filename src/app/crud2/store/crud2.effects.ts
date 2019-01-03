@@ -3,8 +3,8 @@ import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import { Employee } from './../../core/services/employee.model';
-import { EmployeeService } from './../../core/services/employee.service';
+import { Employee } from './../../in-memory-api/employee.interface';
+import { EmployeeService } from './../../in-memory-api/employee.service';
 import * as crud2Actions from './crud2.actions';
 
 @Injectable()

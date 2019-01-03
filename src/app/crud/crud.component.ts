@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Employee } from './../core/services/employee.model';
+import { Employee } from './../in-memory-api/employee.interface';
 import * as fromRoot from './../root-store';
 import { CrudStoreActions, CrudStoreSelectors } from './store';
 

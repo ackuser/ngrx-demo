@@ -1,6 +1,6 @@
 
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { Employee } from './../../core/services/employee.model';
+import { Employee } from './../../in-memory-api/employee.interface';
 import { Crud2State, selectAll } from './crud2-state.interface';
 
 // Selector functions

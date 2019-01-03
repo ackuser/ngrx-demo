@@ -1,5 +1,5 @@
 import { Action } from '@ngrx/store';
-import { Employee } from './../../core/services/employee.model';
+import { Employee } from './../../in-memory-api/employee.interface';
 import { isActionNameUnique } from './../../root-store';
 
 export enum ActionTypes {

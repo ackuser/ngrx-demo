@@ -1,5 +1,5 @@
 import { InMemoryDbService } from 'angular-in-memory-web-api';
-import { Employee } from './employee.model';
+import { Employee } from './employee.interface';
 
 export class EmployeeInMemoryData implements InMemoryDbService {
 

@@ -1,5 +1,5 @@
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import { Employee } from './../../core/services/employee.model';
+import { Employee } from './../../in-memory-api/employee.interface';
 import * as fromRoot from './../../root-store';
 
 // state for this feature (search)

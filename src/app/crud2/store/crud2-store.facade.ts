@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Employee } from '../../core/services/employee.model';
 import * as fromRoot from '../../root-store';
+import { Employee } from './../../in-memory-api/employee.interface';
 import { Crud2StoreModule } from './crud2-store.module';
 import * as Crud2StoreActions from './crud2.actions';
 import * as Crud2StoreSelectors from './crud2.selectors';

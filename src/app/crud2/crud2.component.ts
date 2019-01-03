@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Employee } from './../core/services/employee.model';
+import { Employee } from './../in-memory-api/employee.interface';
 import { Crud2StoreFacade } from './store';
 
 @Component({
