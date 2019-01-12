@@ -6,9 +6,16 @@
     "start": "ng serve -o",
     "build": "ng build",
     "test": "ng test",
+    "test-headless": "ng test --watch=false --browsers=ChromeHeadless",
     "lint": "ng lint",
+    "lint:styles": "stylelint ./src/**/*.scss",
     "e2e": "ng e2e",
-    "outdated": "npm outdated --depth 0"
+    "scss-lint": "scss-lint",
+    "outdated": "npm outdated --depth 0",
+    "doc": "./node_modules/.bin/compodoc -p src/tsconfig.app.json -n \"hd-customer-web documentation\"  --theme \"Vagrant\" -s -o ",
+    "stats": "ng build --prod --build-optimizer --base-href=./ --stats-json && webpack-bundle-analyzer dist/hd-customer-web/stats.json",
+    "conventional-changelog": "conventional-changelog",
+    "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md"
   },
   "private": true,
   "dependencies": {
@@ -29,17 +36,20 @@
     "angular-in-memory-web-api": "~0.8.0",
     "core-js": "~2.5.4",
     "rxjs": "~6.3.3",
-    "zone.js": "~0.8.26"
+    "zone.js": "~0.8.27"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.12.1",
     "@angular/cli": "~7.2.0",
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
+    "@compodoc/compodoc": "~1.1.7",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
     "codelyzer": "~4.5.0",
+    "conventional-changelog-cli": "~2.0.11",
+    "husky": "~1.3.1",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~3.0.0",
@@ -48,10 +58,22 @@
     "karma-jasmine": "~1.1.2",
     "karma-jasmine-html-reporter": "~0.2.2",
     "ngrx-store-freeze": "~0.2.4",
-    "protractor": "~5.4.0",
-    "rxjs-watcher": "^1.0.6",
+    "protractor": "~5.4.2",
+    "rxjs-tslint-rules": "~4.14.3",
+    "rxjs-watcher": "~1.0.6",
+    "source-map-explorer": "~1.6.0",
+    "stylelint": "~9.6.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
-    "typescript": "~3.1.6"
+    "tslint-eslint-rules": "~5.4.0",
+    "tslint-language-service": "~0.9.9",
+    "typescript": "~3.2.2",
+    "webpack-bundle-analyzer": "~3.0.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "ng lint",
+      "pre-push": "ng lint"
+    }
   }
 }
