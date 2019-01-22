@@ -1,11 +1,11 @@
+import { BasicStoreState } from '@app/basic/store';
+import { clearStoreMetaReducer } from '@app/root-store/meta-reducers/clear-store.meta-reducer';
+import { logStoreMetaReducer } from '@app/root-store/meta-reducers/log-store.meta-reducer';
+import { RouterState } from '@app/root-store/router-store/router-state.interface';
+import { environment } from '@env/environment';
 import { routerReducer, RouterReducerState } from '@ngrx/router-store';
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { storeFreeze } from 'ngrx-store-freeze';
-import { environment } from '../../environments/environment';
-import { BasicStoreState } from '../basic/store';
-import { clearStoreMetaReducer } from './meta-reducers/clear-store.meta-reducer';
-import { logStoreMetaReducer } from './meta-reducers/log-store.meta-reducer';
-import { RouterState } from './router-store/router-state.interface';
 
 /**
  * Representation of the entire state. Treat each reducer like a table in a

@@ -1,8 +1,8 @@
 import { Params } from '@angular/router';
+import { AppState } from '@app/root-store/root-store-state.interface';
+import { RouterState } from '@app/root-store/router-store/router-state.interface';
 import { RouterReducerState } from '@ngrx/router-store';
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { AppState } from './../root-store-state.interface';
-import { RouterState } from './router-state.interface';
 
 export const selectRouterReducerState: MemoizedSelector<object,  RouterReducerState<RouterState> >
 = createFeatureSelector<

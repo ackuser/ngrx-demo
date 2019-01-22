@@ -1,6 +1,6 @@
+import { State } from '@app/root-store/root-store-state.interface';
+import { ActionTypes, Union } from '@app/root-store/root-store.actions';
 import { ActionReducer } from '@ngrx/store';
-import { State } from '../root-store-state.interface';
-import { ActionTypes, Union } from '../root-store.actions';
 
 
 // reset meta-reduce :  clear the store after the LOG_OUT action.

@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { RouterStateSnapshot } from '@angular/router';
+import { RouterState } from '@app/root-store/router-store/router-state.interface';
 import { RouterStateSerializer } from '@ngrx/router-store';
-import { RouterState } from './router-state.interface';
 
 @Injectable()
 export class CustomSerializer implements RouterStateSerializer<RouterState> {

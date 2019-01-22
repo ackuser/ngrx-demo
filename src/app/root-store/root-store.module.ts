@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { metaReducers, reducers } from '@app/root-store/root-store-state.interface';
+import { RootStoreEffects } from '@app/root-store/root-store.effects';
+import { CustomSerializer } from '@app/root-store/router-store/custom-serializer';
+import { environment } from '@env/environment';
 import { EffectsModule } from '@ngrx/effects';
 import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { environment } from '../../environments/environment';
-import { metaReducers, reducers } from './root-store-state.interface';
-import { RootStoreEffects } from './root-store.effects';
-import { CustomSerializer } from './router-store/custom-serializer';
 
 @NgModule({
   imports: [

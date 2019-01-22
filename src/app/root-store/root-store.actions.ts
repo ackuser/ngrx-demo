@@ -1,5 +1,5 @@
+import { isActionNameUnique } from '@app/root-store/action-unique';
 import { Action } from '@ngrx/store';
-import { isActionNameUnique } from './action-unique';
 
 export enum ActionTypes {
   LOG_OUT_TO_CLEAR_STORE = '[ Application ] Logout to Clear Application Store',

@@ -1,5 +1,5 @@
+import { State } from '@app/root-store/root-store-state.interface';
 import { ActionReducer } from '@ngrx/store';
-import { State } from './../root-store-state.interface';
 
 
 // console.log all actions
