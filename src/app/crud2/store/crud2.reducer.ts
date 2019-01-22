@@ -7,8 +7,7 @@ export function crud2Reducer(state = initialState, action: Union): Crud2State {
     case ActionTypes.CRUD2_EMPLOYEE_LOAD_REQUEST:
     case ActionTypes.CRUD2_EMPLOYEE_CREATE_REQUEST:
     case ActionTypes.CRUD2_EMPLOYEE_UPDATE_REQUEST:
-    case ActionTypes.CRUD2_EMPLOYEE_DELETE_REQUEST:
-    {
+    case ActionTypes.CRUD2_EMPLOYEE_DELETE_REQUEST: {
       return {
         ...state,
         isLoading: true,
@@ -16,8 +15,7 @@ export function crud2Reducer(state = initialState, action: Union): Crud2State {
       };
     }
 
-    case ActionTypes.CRUD2_EMPLOYEE_LOAD_SUCCESS:
-    {
+    case ActionTypes.CRUD2_EMPLOYEE_LOAD_SUCCESS: {
       return crudEntityadapter.addAll(action.payload, {
         ...state,
         isLoading: false,
@@ -25,8 +23,7 @@ export function crud2Reducer(state = initialState, action: Union): Crud2State {
       });
     }
 
-    case ActionTypes.CRUD2_EMPLOYEE_CREATE_OR_UPDATE_SUCCESS:
-    {
+    case ActionTypes.CRUD2_EMPLOYEE_CREATE_OR_UPDATE_SUCCESS: {
       return crudEntityadapter.upsertOne(action.payload, {
         ...state,
         isLoading: false,
@@ -34,8 +31,7 @@ export function crud2Reducer(state = initialState, action: Union): Crud2State {
       });
     }
 
-    case ActionTypes.CRUD2_EMPLOYEE_DELETE_SUCCESS:
-    {
+    case ActionTypes.CRUD2_EMPLOYEE_DELETE_SUCCESS: {
       return crudEntityadapter.removeOne(action.payload, {
         ...state,
         isLoading: false,

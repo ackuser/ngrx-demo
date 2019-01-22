@@ -11,8 +11,7 @@ export function search2Reducer(state = initialState, action: Union): Search2Stat
         error: null
       };
 
-    case ActionTypes.SEARCH2_COUNTRIES_SUCCESS:
-    {
+    case ActionTypes.SEARCH2_COUNTRIES_SUCCESS: {
       return search2Entityadapter.addAll(action.payload, {
         ...state,
         isLoading: false,

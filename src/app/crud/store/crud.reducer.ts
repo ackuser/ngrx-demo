@@ -7,8 +7,7 @@ export function crudReducer(state = initialState, action: Union): CrudState {
     case ActionTypes.CRUD_EMPLOYEE_LOAD_REQUEST:
     case ActionTypes.CRUD_EMPLOYEE_CREATE_REQUEST:
     case ActionTypes.CRUD_EMPLOYEE_UPDATE_REQUEST:
-    case ActionTypes.CRUD_EMPLOYEE_DELETE_REQUEST:
-    {
+    case ActionTypes.CRUD_EMPLOYEE_DELETE_REQUEST: {
       return {
         ...state,
         isLoading: true,
@@ -16,8 +15,7 @@ export function crudReducer(state = initialState, action: Union): CrudState {
       };
     }
 
-    case ActionTypes.CRUD_EMPLOYEE_LOAD_SUCCESS:
-    {
+    case ActionTypes.CRUD_EMPLOYEE_LOAD_SUCCESS: {
       // Replace current collection with provided collection
       return crudEntityadapter.addAll(action.payload, {
         ...state,
@@ -26,8 +24,7 @@ export function crudReducer(state = initialState, action: Union): CrudState {
       });
     }
 
-    case ActionTypes.CRUD_EMPLOYEE_CREATE_OR_UPDATE_SUCCESS:
-    {
+    case ActionTypes.CRUD_EMPLOYEE_CREATE_OR_UPDATE_SUCCESS: {
       // Add or Update one entity in the collection
       return crudEntityadapter.upsertOne(action.payload, {
         ...state,
@@ -36,8 +33,7 @@ export function crudReducer(state = initialState, action: Union): CrudState {
       });
     }
 
-    case ActionTypes.CRUD_EMPLOYEE_DELETE_SUCCESS:
-    {
+    case ActionTypes.CRUD_EMPLOYEE_DELETE_SUCCESS: {
       // Remove one entity from the collection
       return crudEntityadapter.removeOne(action.payload, {
         ...state,
