@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+import { BasicRoutingModule } from '@app/basic/basic-routing.module';
+import { BasicStoreState } from '@app/basic/store';
 import { StoreModule } from '@ngrx/store';
-import { SharedModule } from '../shared/shared.module';
-import { BasicRoutingModule } from './basic-routing.module';
-import { BasicStoreState } from './store';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   imports: [

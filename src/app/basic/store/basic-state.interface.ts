@@ -1,8 +1,8 @@
+import { MessageState } from '@app/basic/store/message-state.interface';
+import { messageReducer } from '@app/basic/store/message.reducer';
+import { SwitchState } from '@app/basic/store/switch-state.interface';
+import { switchReducer } from '@app/basic/store/switch.reducer';
 import { ActionReducerMap } from '@ngrx/store';
-import { MessageState } from './message-state.interface';
-import { messageReducer } from './message.reducer';
-import { SwitchState } from './switch-state.interface';
-import { switchReducer } from './switch.reducer';
 
 /**
  * Each reducer is like a table in a database. Here `BasicState` is a feature-level

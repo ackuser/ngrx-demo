@@ -1,5 +1,5 @@
+import { ActionTypes, Union } from '@app/basic/store/switch.actions';
 import { initialState, SwitchState } from './switch-state.interface';
-import { ActionTypes, Union } from './switch.actions';
 
 export function switchReducer(state = initialState, action: Union): SwitchState {
   switch (action.type) {

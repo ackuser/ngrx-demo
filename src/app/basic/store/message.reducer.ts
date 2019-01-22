@@ -1,5 +1,5 @@
+import { ActionTypes, Union } from '@app/basic/store/message.actions';
 import { initialState, MessageState } from './message-state.interface';
-import { ActionTypes, Union } from './message.actions';
 
 export function messageReducer(state = initialState, action: Union): MessageState {
   switch (action.type) {

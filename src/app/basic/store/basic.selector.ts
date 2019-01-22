@@ -1,7 +1,7 @@
 
+import { BasicState } from '@app/basic/store/basic-state.interface';
+import { SwitchState } from '@app/basic/store/switch-state.interface';
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { BasicState } from './basic-state.interface';
-import { SwitchState } from './switch-state.interface';
 
 // Selector functions
 

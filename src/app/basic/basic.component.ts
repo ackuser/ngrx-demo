@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { BasicStoreSelectors, MessageStoreActions, SwitchStoreActions } from '@app/basic/store';
+import * as fromRoot from '@app/root-store';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
-import * as fromRoot from './../root-store';
-import { BasicStoreSelectors, MessageStoreActions, SwitchStoreActions } from './store';
 
 @Component({
   selector: 'app-basic',
