@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { LazyLoadComponent } from './lazy-load.component';
+import { LazyLoadComponent } from '@app/lazy-load/lazy-load.component';
 
 
 describe('Basic2Component', () => {

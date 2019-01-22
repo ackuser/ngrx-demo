@@ -1,6 +1,6 @@
+import { Employee } from '@app/in-memory-api/employee.interface';
+import * as fromRoot from '@app/root-store';
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import { Employee } from './../../in-memory-api/employee.interface';
-import * as fromRoot from './../../root-store';
 
 // state for this feature (search)
 export interface CrudState extends EntityState<Employee> {

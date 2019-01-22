@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
+import { Crud2Effects } from '@app/crud2/store/crud2.effects';
+import { crud2Reducer } from '@app/crud2/store/crud2.reducer';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { Crud2Effects } from './crud2.effects';
-import { crud2Reducer } from './crud2.reducer';
 
 @NgModule({
   imports: [

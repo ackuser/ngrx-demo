@@ -1,4 +1,4 @@
-import * as fromRoot from './../../root-store';
+import * as fromRoot from '@app/root-store';
 
 export interface LazyLoadState {
   message: string;

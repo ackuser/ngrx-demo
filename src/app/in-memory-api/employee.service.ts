@@ -1,9 +1,9 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Employee } from '@app/in-memory-api/employee.interface';
+import { InMemoryApiModule } from '@app/in-memory-api/in-memory-api.module';
 import { Observable, throwError } from 'rxjs';
 import { catchError, finalize, map } from 'rxjs/operators';
-import { Employee } from './employee.interface';
-import { InMemoryApiModule } from './in-memory-api.module';
 
 @Injectable({
   providedIn: InMemoryApiModule

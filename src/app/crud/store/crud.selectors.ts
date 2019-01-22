@@ -1,7 +1,7 @@
 
+import { CrudState, selectAll } from '@app/crud/store/crud-state.interface';
+import { Employee } from '@app/in-memory-api/employee.interface';
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { Employee } from './../../in-memory-api/employee.interface';
-import { CrudState, selectAll } from './crud-state.interface';
 
 // Selector functions
 const selectCrudState: MemoizedSelector<object, CrudState>

@@ -1,5 +1,5 @@
+import { isActionNameUnique } from '@app/root-store';
 import { Action } from '@ngrx/store';
-import { isActionNameUnique } from './../../root-store';
 
 export enum ActionTypes {
   ENGLISH = '[Lazy-Load Page] English Translation',

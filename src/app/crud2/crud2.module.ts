@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { SharedModule } from '../shared/shared.module';
-import { InMemoryApiModule } from './../in-memory-api/in-memory-api.module';
-import { Crud2RoutingModule } from './crud2-routing.module';
-import { Crud2StoreModule } from './store';
+import { Crud2RoutingModule } from '@app/crud2/crud2-routing.module';
+import { Crud2StoreModule } from '@app/crud2/store';
+import { InMemoryApiModule } from '@app/in-memory-api/in-memory-api.module';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   imports: [

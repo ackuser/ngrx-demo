@@ -1,5 +1,5 @@
+import { ActionTypes, Union } from '@app/crud/store/crud.actions';
 import { crudEntityadapter, CrudState, initialState } from './crud-state.interface';
-import { ActionTypes, Union } from './crud.actions';
 
 export function crudReducer(state = initialState, action: Union): CrudState {
   switch (action.type) {

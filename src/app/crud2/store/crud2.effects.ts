@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
+import * as crud2Actions from '@app/crud2/store/crud2.actions';
+import { Employee } from '@app/in-memory-api/employee.interface';
+import { EmployeeService } from '@app/in-memory-api/employee.service';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { catchError, concatMap, map, switchMap } from 'rxjs/operators';
-import { Employee } from './../../in-memory-api/employee.interface';
-import { EmployeeService } from './../../in-memory-api/employee.service';
-import * as crud2Actions from './crud2.actions';
 
 @Injectable()
 export class Crud2Effects {

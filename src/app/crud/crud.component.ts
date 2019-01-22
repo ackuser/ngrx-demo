@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { CrudStoreActions, CrudStoreSelectors } from '@app/crud/store';
+import { Employee } from '@app/in-memory-api/employee.interface';
+import * as fromRoot from '@app/root-store';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Employee } from './../in-memory-api/employee.interface';
-import * as fromRoot from './../root-store';
-import { CrudStoreActions, CrudStoreSelectors } from './store';
 
 @Component({
   selector: 'app-crud',

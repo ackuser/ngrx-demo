@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { EmployeeInMemoryData } from '@app/in-memory-api/employee-in-memory-data';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { EmployeeInMemoryData } from './employee-in-memory-data';
 
 @NgModule({
   imports: [

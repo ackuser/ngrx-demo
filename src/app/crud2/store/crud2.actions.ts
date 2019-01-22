@@ -1,6 +1,6 @@
+import { Employee } from '@app/in-memory-api/employee.interface';
+import { isActionNameUnique } from '@app/root-store';
 import { Action } from '@ngrx/store';
-import { Employee } from './../../in-memory-api/employee.interface';
-import { isActionNameUnique } from './../../root-store';
 
 export enum ActionTypes {
   CRUD2_EMPLOYEE_LOAD_REQUEST = '[CRUD2 Page] Load Employee Request',

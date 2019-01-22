@@ -1,5 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
-import { CrudComponent } from './crud.component';
+import { CrudComponent } from '@app/crud/crud.component';
 
 describe('CrudComponent', () => {
   beforeEach(async(() => {

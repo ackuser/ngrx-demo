@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { LazyLoadStoreActions, LazyLoadStoreSelectors } from '@app/lazy-load/store';
+import * as fromRoot from '@app/root-store';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import * as fromRoot from './../root-store';
-import { LazyLoadStoreActions, LazyLoadStoreSelectors } from './store';
 
 @Component({
   selector: 'app-lazy-load',

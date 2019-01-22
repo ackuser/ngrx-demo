@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Crud2StoreFacade } from '@app/crud2/store';
+import { Employee } from '@app/in-memory-api/employee.interface';
 import { Observable } from 'rxjs';
-import { Employee } from './../in-memory-api/employee.interface';
-import { Crud2StoreFacade } from './store';
 
 @Component({
   selector: 'app-crud2',

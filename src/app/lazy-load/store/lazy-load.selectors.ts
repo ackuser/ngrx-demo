@@ -1,6 +1,6 @@
 
+import { LazyLoadState } from '@app/lazy-load/store/lazy-load-state.interface';
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { LazyLoadState } from './lazy-load-state.interface';
 
 // Selector functions
 const selectLazyLoadFeatureState: MemoizedSelector<object, LazyLoadState> = createFeatureSelector<LazyLoadState>('lazyLoad');

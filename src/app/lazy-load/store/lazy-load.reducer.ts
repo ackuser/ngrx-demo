@@ -1,5 +1,5 @@
-import { initialState, LazyLoadState } from './lazy-load-state.interface';
-import { ActionTypes, Union } from './lazy-load.actions';
+import { initialState, LazyLoadState } from '@app/lazy-load/store/lazy-load-state.interface';
+import { ActionTypes, Union } from '@app/lazy-load/store/lazy-load.actions';
 
 export function lazyLoadReducer(state = initialState, action: Union): LazyLoadState {
   switch (action.type) {
