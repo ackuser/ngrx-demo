@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Country } from './../../core/services/country.model';
+import { Country } from '@core/services/country.model';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

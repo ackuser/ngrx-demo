@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
-import { Employee } from './../../in-memory-api/employee.interface';
+import { Employee } from '@app/in-memory-api/employee.interface';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,

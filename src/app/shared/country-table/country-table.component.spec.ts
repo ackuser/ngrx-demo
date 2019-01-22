@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CountryTableComponent } from '@shared/country-table/country-table.component';
 
-import { CountryTableComponent } from './country-table.component';
 
 describe('CountryTableComponent', () => {
   let component: CountryTableComponent;

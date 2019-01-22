@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { CountryCardComponent } from '@shared/country-card/country-card.component';
 
-import { CountryCardComponent } from './country-card.component';
 
 describe('CountryCardComponent', () => {
   let component: CountryCardComponent;
