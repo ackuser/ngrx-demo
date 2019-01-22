@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import * as fromRoot from '@app/root-store';
+import { SearchStoreActions, SearchStoreSelectors } from '@app/search/store';
+import { Country } from '@core/services/country.model';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, filter, map } from 'rxjs/operators';
-import { Country } from './../core/services/country.model';
-import * as fromRoot from './../root-store';
-import { SearchStoreActions, SearchStoreSelectors } from './store';
 
 @Component({
   selector: 'app-search',

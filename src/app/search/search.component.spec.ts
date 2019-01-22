@@ -1,5 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
-import { SearchComponent } from './search.component';
+import { SearchComponent } from '@app/search/search.component';
 
 describe('SearchComponent', () => {
   beforeEach(async(() => {

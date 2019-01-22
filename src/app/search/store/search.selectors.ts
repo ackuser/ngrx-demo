@@ -1,7 +1,7 @@
 
+import { SearchState } from '@app/search/store/search-state.interface';
+import { Country } from '@core/services/country.model';
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { Country } from './../../core/services/country.model';
-import { SearchState } from './search-state.interface';
 
 // Selector functions
 const selectSearchState: MemoizedSelector<object, SearchState>

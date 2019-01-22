@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
+import * as searchActions from '@app/search/store/search.actions';
+import { Country } from '@core/services/country.model';
+import { CountryService } from '@core/services/country.service';
 import { Actions, Effect, ofType } from '@ngrx/effects';
 import { Action } from '@ngrx/store';
 import { Observable, of } from 'rxjs';
 import { catchError, map, switchMap } from 'rxjs/operators';
-import { Country } from '../../core/services/country.model';
-import { CountryService } from '../../core/services/country.service';
-import * as searchActions from './search.actions';
 
 @Injectable()
 export class SearchEffects {

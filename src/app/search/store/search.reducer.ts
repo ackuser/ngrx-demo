@@ -1,5 +1,5 @@
-import { initialState, SearchState } from './search-state.interface';
-import { ActionTypes, Union } from './search.actions';
+import { initialState, SearchState } from '@app/search/store/search-state.interface';
+import { ActionTypes, Union } from '@app/search/store/search.actions';
 
 export function searchReducer(state = initialState, action: Union): SearchState {
   switch (action.type) {
