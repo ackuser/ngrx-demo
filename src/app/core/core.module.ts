@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule, Optional, SkipSelf } from '@angular/core';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from '@core/header/header.component';
 
 @NgModule({
   imports: [

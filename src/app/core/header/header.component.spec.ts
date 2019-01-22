@@ -2,11 +2,11 @@ import { Location } from '@angular/common';
 import { async, ComponentFixture, ComponentFixtureAutoDetect, fakeAsync, TestBed, tick } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { BasicComponent } from '../../basic/basic.component';
-import { BasicModule } from '../../basic/basic.module';
-import { SearchComponent } from '../../search/search.component';
-import { SearchModule } from '../../search/search.module';
-import { HeaderComponent } from './header.component';
+import { BasicComponent } from '@app/basic/basic.component';
+import { BasicModule } from '@app/basic/basic.module';
+import { SearchComponent } from '@app/search/search.component';
+import { SearchModule } from '@app/search/search.module';
+import { HeaderComponent } from '@core/header/header.component';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
