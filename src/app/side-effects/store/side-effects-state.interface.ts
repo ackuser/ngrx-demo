@@ -1,5 +1,5 @@
-import * as fromRoot from '../../root-store';
-import { Country } from './../../core/services/country.model';
+import * as fromRoot from '@app/root-store';
+import { Country } from '@core/services/country.model';
 
 // state for this feature (side-effects)
 export interface SideEffectsState {

@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
+import { Search2RoutingModule } from '@app/search2/search2-routing.module';
+import { Search2Effects, search2Reducer } from '@app/search2/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { SharedModule } from '../shared/shared.module';
-import { Search2RoutingModule } from './search2-routing.module';
-import { Search2Effects, search2Reducer } from './store';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   imports: [

@@ -1,5 +1,5 @@
 import { async, TestBed } from '@angular/core/testing';
-import { Search2Component } from './search2.component';
+import { Search2Component } from '@app/search2/search2.component';
 
 describe('Search2Component', () => {
   beforeEach(async(() => {

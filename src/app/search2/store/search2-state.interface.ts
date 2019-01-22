@@ -1,6 +1,6 @@
+import * as fromRoot from '@app/root-store';
+import { Country } from '@core/services/country.model';
 import { createEntityAdapter, EntityAdapter, EntityState } from '@ngrx/entity';
-import { Country } from '../../core/services/country.model';
-import * as fromRoot from '../../root-store';
 
 // state for this feature (search)
 export interface Search2State extends EntityState<Country> {

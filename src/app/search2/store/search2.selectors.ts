@@ -1,7 +1,7 @@
 
+import { Search2State, selectAll } from '@app/search2/store/search2-state.interface';
+import { Country } from '@core/services/country.model';
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { Country } from './../../core/services/country.model';
-import { Search2State, selectAll } from './search2-state.interface';
 
 // Selector functions
 const selectSearch2State: MemoizedSelector<object, Search2State>

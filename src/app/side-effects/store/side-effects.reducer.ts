@@ -1,5 +1,5 @@
-import { initialState, SideEffectsState } from './side-effects-state.interface';
-import { ActionTypes, Union } from './side-effects.actions';
+import { initialState, SideEffectsState } from '@app/side-effects/store/side-effects-state.interface';
+import { ActionTypes, Union } from '@app/side-effects/store/side-effects.actions';
 
 export function sideEffectsReducer(state = initialState, action: Union): SideEffectsState {
   switch (action.type) {

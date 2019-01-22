@@ -1,5 +1,5 @@
+import { ActionTypes, Union } from '@app/search2/store/search2.actions';
 import { initialState, search2Entityadapter, Search2State } from './search2-state.interface';
-import { ActionTypes, Union } from './search2.actions';
 
 export function search2Reducer(state = initialState, action: Union): Search2State {
   switch (action.type) {

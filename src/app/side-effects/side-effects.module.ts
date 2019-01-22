@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
+import { SideEffectsRoutingModule } from '@app/side-effects/side-effects-routing.module';
+import { SideEffectsEffects, sideEffectsReducer } from '@app/side-effects/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { SharedModule } from '../shared/shared.module';
-import { SideEffectsRoutingModule } from './side-effects-routing.module';
-import { SideEffectsEffects, sideEffectsReducer } from './store';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   imports: [

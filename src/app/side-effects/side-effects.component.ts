@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import * as fromRoot from '@app/root-store';
+import { SideEffectsStoreActions, SideEffectsStoreSelectors } from '@app/side-effects/store';
+import { Country } from '@core/services/country.model';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Country } from '../core/services/country.model';
-import * as fromRoot from './../root-store';
-import { SideEffectsStoreActions, SideEffectsStoreSelectors } from './store';
 
 @Component({
   selector: 'app-side-effects',

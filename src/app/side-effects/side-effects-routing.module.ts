@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SideEffectsComponent } from './side-effects.component';
+import { SideEffectsComponent } from '@app/side-effects/side-effects.component';
 
 const routes: Routes = [{
   path: '',

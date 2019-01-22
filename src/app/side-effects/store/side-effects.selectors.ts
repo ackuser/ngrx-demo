@@ -1,7 +1,7 @@
 
+import { SideEffectsState } from '@app/side-effects/store/side-effects-state.interface';
+import { Country } from '@core/services/country.model';
 import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/store';
-import { Country } from './../../core/services/country.model';
-import { SideEffectsState } from './side-effects-state.interface';
 
 // Selector functions
 const selectSideEffectsFeatureState: MemoizedSelector<object, SideEffectsState> = createFeatureSelector<SideEffectsState>('sideEffects');

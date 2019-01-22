@@ -1,6 +1,6 @@
+import { isActionNameUnique } from '@app/root-store';
+import { Country } from '@core/services/country.model';
 import { Action } from '@ngrx/store';
-import { Country } from '../../core/services/country.model';
-import { isActionNameUnique } from './../../root-store';
 
 export enum ActionTypes {
   SEARCH2_COUNTRIES_REQUEST = '[Search2 Page] Search Countries Request',

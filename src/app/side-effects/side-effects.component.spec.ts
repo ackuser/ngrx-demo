@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { SideEffectsComponent } from '@app/side-effects/side-effects.component';
 
-import { SideEffectsComponent } from './side-effects.component';
 
 describe('SideEffectsComponent', () => {
   let component: SideEffectsComponent;
