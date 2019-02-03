@@ -1,9 +1,11 @@
-import { NgModule } from '@angular/core';
+import { APP_INITIALIZER, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '@app/app-routing.module';
 import { AppComponent } from '@app/app.component';
 import { BasicModule } from '@app/basic/basic.module';
+import { InMemoryApiModule } from '@app/in-memory-api/in-memory-api.module';
 import { RootStoreModule } from '@app/root-store';
+import { AppInitStoreFacade, initApplication } from '@app/root-store/app-init/app-init-store.facade';
 import { CoreModule } from '@core/core.module';
 
 @NgModule({
@@ -13,9 +15,18 @@ import { CoreModule } from '@core/core.module';
   imports: [
     BrowserModule,
     CoreModule,
+    InMemoryApiModule,
     RootStoreModule,
     BasicModule,
     AppRoutingModule
+  ],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initApplication,
+      deps: [AppInitStoreFacade],
+      multi: true
+    },
   ],
   bootstrap: [AppComponent]
 })

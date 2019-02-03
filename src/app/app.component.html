@@ -1,4 +1,8 @@
 <app-header></app-header>
+<app-loader
+[errorMessage]="errorMessage$ | async"
+[isLoading]="isLoading$ | async" >
+</app-loader>
 <main>
   <router-outlet></router-outlet>
 </main>

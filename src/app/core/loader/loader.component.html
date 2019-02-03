@@ -1,0 +1,7 @@
+<ng-container *ngIf="isLoading">
+  <div class="loader"></div>
+</ng-container>
+
+<div *ngIf="errorMessage" class="alert-error">
+  {{ errorMessage }}
+</div>

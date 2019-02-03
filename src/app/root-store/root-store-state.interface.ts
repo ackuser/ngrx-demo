@@ -6,6 +6,8 @@ import { environment } from '@env/environment';
 import { routerReducer, RouterReducerState } from '@ngrx/router-store';
 import { ActionReducerMap, MetaReducer } from '@ngrx/store';
 import { storeFreeze } from 'ngrx-store-freeze';
+import { AppConfigState } from './app-init/app-config-state.interface';
+import { appConfigReducer } from './app-init/app-config.reducer';
 
 /**
  * Representation of the entire state. Treat each reducer like a table in a
@@ -22,10 +24,12 @@ export interface State {
 */
 export interface AppState {
   router: RouterReducerState<RouterState>;
+  config: AppConfigState;
 }
 
 export const reducers: ActionReducerMap<AppState> = {
-  router: routerReducer
+  router: routerReducer,
+  config: appConfigReducer
 };
 
 

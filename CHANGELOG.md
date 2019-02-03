@@ -1,3 +1,18 @@
+<a name="v2.2.0"></a>
+## 2.2.0 (2019-02-03)
+
+#### Bug Fixes
+* NA
+
+#### Features
+
+* Initialized Angular App with NgRx & APP_INITIALIZER. Loaded  application config into NgRx Store [PR 1](https://github.com/kumaran-is/ngrx-demo/pull/1)
+* Updated the demo with NgRx Life cycle hooks - ROOT_EFFECTS_INIT
+, OnInitEffects and OnRunEffects [PR 1](https://github.com/kumaran-is/ngrx-demo/pull/1)
+
+#### Breaking Changes
+* NA
+
 <a name="v2.1.0"></a>
 ## 2.1.0 (2018-12-31)
 

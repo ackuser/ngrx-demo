@@ -31,6 +31,15 @@ export class EmployeeInMemoryData implements InMemoryDbService {
             'city': 'orlando'
           }
         ];
-        return { employees };
+
+        const config: any = [
+          {
+              'env': 1,
+              'webAPIURL': 'http://sample.com/api',
+              'authURL': 'http://sample.com/api/authz',
+              'port': 4000
+          }
+        ];
+        return { employees, config };
     }
 }

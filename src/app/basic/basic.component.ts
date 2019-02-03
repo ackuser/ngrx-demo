@@ -59,5 +59,9 @@ export class BasicComponent implements OnInit {
     this.store$.dispatch(new fromRoot.RootStoreActions.LogoutToHome());
   }
 
+  loadAppConfig() {
+    this.store$.dispatch(new fromRoot.AppConfigActions.AppConfigLoadRequest());
+  }
+
 }
 

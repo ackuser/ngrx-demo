@@ -10,7 +10,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
     HttpClientModule,
      // Always import the HttpClientInMemoryWebApiModule after the HttpClientModule
     // 500ms delay to all data requests to simulate round-trip latency.
-    HttpClientInMemoryWebApiModule.forFeature(EmployeeInMemoryData,  { delay: 500 }),
+    HttpClientInMemoryWebApiModule.forRoot(EmployeeInMemoryData,  { delay: 500 }),
   ]
 })
 export class InMemoryApiModule { }
