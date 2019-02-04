@@ -1,0 +1,6 @@
+{
+  "env": "development",
+  "webAPIURL": "http://dev.sample.com/api",
+  "authURL": "http://dev.sample.com/api/authz",
+  "port": 4000
+}

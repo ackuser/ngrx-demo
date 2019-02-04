@@ -1,6 +1,7 @@
 import { isActionNameUnique } from '@app/root-store';
 import { Action } from '@ngrx/store';
 
+// TypeScript enum’s are immutable
 export enum ActionTypes {
   ENGLISH = '[Lazy-Load Page] English Translation',
   SPANISH = '[Lazy-Load Page] Spanish Translation',

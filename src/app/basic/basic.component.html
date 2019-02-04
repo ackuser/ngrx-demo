@@ -25,6 +25,7 @@
 </div>
 <br><br>
 <div>
-  <h5>Try loading App Config. Verify using Redux Dev Tool</h5>
-  <button (click)="loadAppConfig()">Load App Config</button>
+  <h5>Application Environment Config Settings, loaded into store during application start via APP_INITIALIZER</h5>
+  <app-config-table [appEnvConfig]="appEnvConfig$ | async"></app-config-table>
 </div>
+

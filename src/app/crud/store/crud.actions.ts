@@ -2,6 +2,7 @@ import { Employee } from '@app/in-memory-api/employee.interface';
 import { isActionNameUnique } from '@app/root-store';
 import { Action } from '@ngrx/store';
 
+// TypeScript enum’s are immutable
 export enum ActionTypes {
   CRUD_EMPLOYEE_LOAD_REQUEST = '[CRUD Page] Load Employee Request',
   CRUD_EMPLOYEE_LOAD_SUCCESS = '[CRUD Page] Load Employee Success',

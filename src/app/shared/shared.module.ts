@@ -5,6 +5,7 @@ import { CountryCardComponent } from '@shared/country-card/country-card.componen
 import { CountryTableComponent } from '@shared/country-table/country-table.component';
 import { EmployeeFormComponent } from '@shared/employee-form/employee-form.component';
 import { EmployeeTableComponent } from '@shared/employee-table/employee-table.component';
+import { ConfigTableComponent } from './config-table/config-table.component';
 
 @NgModule({
   imports: [
@@ -12,6 +13,7 @@ import { EmployeeTableComponent } from '@shared/employee-table/employee-table.co
     ReactiveFormsModule
   ],
   declarations: [
+    ConfigTableComponent,
     CountryCardComponent,
     CountryTableComponent,
     EmployeeFormComponent,
@@ -20,6 +22,7 @@ import { EmployeeTableComponent } from '@shared/employee-table/employee-table.co
   exports: [
     CommonModule,
     ReactiveFormsModule,
+    ConfigTableComponent,
     CountryCardComponent,
     CountryTableComponent,
     EmployeeFormComponent,

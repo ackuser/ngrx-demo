@@ -14,10 +14,12 @@ export class BasicComponent implements OnInit {
 
   message$: Observable<String>;
   status$: Observable<boolean>;
+  appEnvConfig$: Observable<any>;
 
   constructor(private store$: Store<fromRoot.State>) {}
 
   ngOnInit() {
+
     this.message$ = this.store$.pipe(
       select('basic'),
       map((response) => {
@@ -27,6 +29,10 @@ export class BasicComponent implements OnInit {
 
     this.status$ = this.store$.pipe(
       select(BasicStoreSelectors.selectSwitchStatus)
+    );
+
+    this.appEnvConfig$ = this.store$.pipe(
+      select(fromRoot.AppInitSelectors.selectConfig)
     );
 
   }

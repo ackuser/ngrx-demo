@@ -2,6 +2,7 @@ import { isActionNameUnique } from '@app/root-store';
 import { Country } from '@core/services/country.model';
 import { Action } from '@ngrx/store';
 
+// TypeScript enum’s are immutable
 export enum ActionTypes {
   SEARCH_COUNTRIES_REQUEST = '[Search Page] Search Countries Request',
   SEARCH_COUNTRIES_SUCCESS = '[Search Page] Search Countries Success',

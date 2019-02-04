@@ -1,3 +1,17 @@
+<a name="v2.3.0"></a>
+## 2.3.0 (2019-02-04)
+
+#### Bug Fixes
+* Fixed search page and side-effects page, by removing in-memory angular loading from app.module
+
+#### Features
+
+* NA
+
+#### Breaking Changes
+* NA
+
+
 <a name="v2.2.0"></a>
 ## 2.2.0 (2019-02-03)
 

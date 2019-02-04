@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import * as fromRoot from '@app/root-store';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +9,6 @@ import { Observable } from 'rxjs';
 })
 export class AppComponent implements OnInit {
   public title = 'ngrx-demo';
-  public config$: Observable<any[]>;
   public errorMessage$: Observable<string>;
   public isLoading$: Observable<boolean>;
 
@@ -20,10 +18,6 @@ export class AppComponent implements OnInit {
 
     this.isLoading$ = this.store$.pipe(
       select(fromRoot.AppInitSelectors.selectIsLoading)
-    );
-
-    this.config$ = this.store$.pipe(
-      select(fromRoot.AppInitSelectors.selectConfig)
     );
 
     this.errorMessage$ = this.store$.pipe(

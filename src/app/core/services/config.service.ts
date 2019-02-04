@@ -1,30 +1,28 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from '@env/environment';
 import { Observable, throwError } from 'rxjs';
 import { catchError, finalize, map } from 'rxjs/operators';
-// import { environment } from '@env/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class ConfigService {
-  config: Object;
-  private apiAppConfigURL = `api/config`;
+  // private apiAppConfigURL = `api/config`;
 
   constructor(private http: HttpClient) {}
 
   public loadAppConfig():  Observable<any[]> {
     /* In real world you will get it from configuration file*/
-    // const envConfigFilePath = environment.configFilePath;
-    // return this.httpClient.get<any>(envConfigFilePath)
-    return this.http.get<any[]>(this.apiAppConfigURL)
+    const envConfigFilePath = environment.configFilePath;
+    return this.http.get<any>(envConfigFilePath)
+    // return this.http.get<any>(this.apiAppConfigURL)
     .pipe(
       map((response: any) => {
-        if ( !Array.isArray(response) || !response.length || Object.keys(response[0]).length === 0) {
-          // array does not exist, is not an array, or is empty
+        if ( Object.keys(response).length === 0) {
+          // if configuration is empty, throw error
           throw new Error('Application Configuration is empty');
         } else {
-          this.config = response;
-          return response as any[];
+          return response as any;
         }
       }),
       catchError(this.handleAndThrowRemoteError.bind(this)),
@@ -32,11 +30,6 @@ export class ConfigService {
         console.log('Clean up your resource here ');
       })
     );
-  }
-
-  getValue(key: string) {
-    // Get value of config key:
-    return this.config[key];
   }
 
   private handleAndThrowRemoteError(error: Error | HttpErrorResponse | any): Observable<any> {
