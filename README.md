@@ -32,6 +32,8 @@ Library | Version | Notes
 
 ## Quick Start
 
+To launch the demo application, you can try below steps yourself on your computer, or launch the application on StackBlitz, by [clicking here](https://stackblitz.com/github/kumaran-is/ngrx-demo).
+
 1. Clone repository and checkout the `master` branch
 
     ```bash
