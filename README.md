@@ -4,6 +4,10 @@ In this demo repo, we'll see by examples how to use NgRx with Angular to manage 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.0.6
 
+## Webpack Bundle Analysis and Statistics
+
+This repository is integrated with packtracker.io, which provids webpack bundle analysis and statistics on every pull request basis and establish performance budgets for your asset profile. To view the webpack bundle analysis and statistics, visit [packtracker.io](https://app.packtracker.io/organizations/86)
+
 **Table of contents:**
 
 1. [Prerequisites and Installation](#prerequisites-and-installation)

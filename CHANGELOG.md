@@ -1,8 +1,23 @@
+<a name="v2.4.0"></a>
+## 2.4.0 (2019-02-07)
+
+#### Bug Fixes
+
+* NA
+
+#### Features
+
+* Integrated with packtracker.io [PR 3](https://github.com/kumaran-is/ngrx-demo/pull/3)
+
+#### Breaking Changes
+
+* NA
+
 <a name="v2.3.0"></a>
 ## 2.3.0 (2019-02-04)
 
 #### Bug Fixes
-* Fixed search page and side-effects page, by removing in-memory angular loading from app.module
+* Fixed search page and side-effects page, by removing in-memory angular loading from app.module [PR 2](https://github.com/kumaran-is/ngrx-demo/pull/2)
 
 #### Features
 
