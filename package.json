@@ -40,6 +40,7 @@
     "@ngrx/store-devtools": "~7.2.0",
     "angular-in-memory-web-api": "~0.8.0",
     "core-js": "~2.6.0",
+    "ngx-build-plus": "^7.7.5",
     "rxjs": "~6.4.0",
     "tslib": "~1.9.0",
     "zone.js": "~0.8.27"
@@ -50,6 +51,7 @@
     "@angular/compiler-cli": "~7.2.0",
     "@angular/language-service": "~7.2.0",
     "@compodoc/compodoc": "~1.1.7",
+    "@packtracker/webpack-plugin": "^1.1.2",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
