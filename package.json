@@ -4,7 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve -o",
+    "start-extra": "ng serve --extra-webpack-config webpack.extra.js -o",
     "build": "ng build",
+    "build-extra": "ng build --extra-webpack-config webpack.extra.js",
     "prod-build": "npm run build -- --prod --build-optimizer --base-href=./",
     "prod-build-named-chunks": "npm run prod-build -- --named-chunks",
     "prod-build-source-map": "npm run prod-build-named-chunks -- --source-map",
