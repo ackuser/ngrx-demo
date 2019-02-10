@@ -1,0 +1,25 @@
+.badge {
+  padding: 1px 7px 1px;
+  font-size: 12.025px;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ffffff;
+  background-color: #b94a48;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+.badge:hover {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: #953b39;
+}
+
+.count {
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  right: 0px;
+  padding: 10px;
+}

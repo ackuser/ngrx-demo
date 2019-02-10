@@ -1,3 +1,18 @@
+<a name="v2.6.0"></a>
+## 2.6.0 (2019-02-09)
+
+#### Bug Fixes
+
+* NA
+
+#### Features
+
+* Updated to show total count of search results in search demo [[PR 5](https://github.com/kumaran-is/ngrx-demo/pull/5)]
+
+#### Breaking Changes
+
+* NA
+
 <a name="v2.5.0"></a>
 ## 2.5.0 (2019-02-09)
 
@@ -7,9 +22,9 @@
 
 #### Features
 
-* Added [ngx-build-modern](https://github.com/manfredsteyer/ngx-build-plus/blob/master/ngx-build-modern/README.md) to Create optimized bundles for modern browsers and legacy bundles for older browsers. Make the browser load the right set of bundles.[[PR 4](https://github.com/kumaran-is/ngrx-demo/pull/4)]
+* Added [ngx-build-modern](https://github.com/manfredsteyer/ngx-build-plus/blob/master/ngx-build-modern/README.md) to Create optimized bundles for modern browsers and legacy bundles for older browsers. Make the browser load the right set of bundles [[PR 4](https://github.com/kumaran-is/ngrx-demo/pull/4)]
 
-* Added [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) to deploy Angular app to GitHub page.
+* Added [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) to deploy Angular app to GitHub page [[PR 4](https://github.com/kumaran-is/ngrx-demo/pull/4)]
 
 #### Breaking Changes
 
