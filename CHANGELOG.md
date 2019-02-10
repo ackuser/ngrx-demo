@@ -1,3 +1,20 @@
+<a name="v2.5.0"></a>
+## 2.5.0 (2019-02-09)
+
+#### Bug Fixes
+
+* NA
+
+#### Features
+
+* Added [ngx-build-modern](https://github.com/manfredsteyer/ngx-build-plus/blob/master/ngx-build-modern/README.md) to Create optimized bundles for modern browsers and legacy bundles for older browsers. Make the browser load the right set of bundles.[[PR 4](https://github.com/kumaran-is/ngrx-demo/pull/4)]
+
+* Added [angular-cli-ghpages](https://github.com/angular-schule/angular-cli-ghpages) to deploy Angular app to GitHub page.
+
+#### Breaking Changes
+
+* NA
+
 <a name="v2.4.0"></a>
 ## 2.4.0 (2019-02-07)
 
@@ -8,6 +25,8 @@
 #### Features
 
 * Integrated with packtracker.io [[PR 3](https://github.com/kumaran-is/ngrx-demo/pull/3)]
+
+* Added [ngx-build-plus](https://github.com/manfredsteyer/ngx-build-plus) to extend the default Angular CLI's Build webpack config without ejecting by providing a custom partial webpack config 1webpack.extra.js` to add configuration for packtracker.io. Updated angular.json with ngx-build-plus. [[PR 3](https://github.com/kumaran-is/ngrx-demo/pull/3)]
 
 #### Breaking Changes
 
