@@ -1,0 +1,6 @@
+{
+  "env": "production",
+  "webAPIURL": "http://prod.sample.com/api",
+  "authURL": "http://prod.sample.com/api/authz",
+  "port": 4000
+}
