@@ -24,7 +24,6 @@
     "conventional-changelog": "conventional-changelog",
     "version": "conventional-changelog -p angular -i CHANGELOG.md -s && git add CHANGELOG.md",
     "build:modern": "ng build --plugin ngx-build-modern --prod",
-    "build:modern:ngrx-demo": "ng build --plugin ngx-build-modern --project ngrx-demo --prod",
     "publish:github": "npx angular-cli-ghpages --dir=dist/ngrx-demo"
   },
   "private": true,
