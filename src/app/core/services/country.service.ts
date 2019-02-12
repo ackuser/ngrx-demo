@@ -64,7 +64,7 @@ export class CountryService {
     let errorMessage = 'An error occurred: ';
     // in a real world app, we may send the server to some remote logging infrastructure
     // instead of just logging it to the console
-    console.error('Error caught while making remote Service call', error);
+    console.error(`%c Error caught while making remote Service call`, `color: #F44336; font-weight: bold`, error);
     if (error.error instanceof ErrorEvent) {
       // A client-side or network error occurred. Handle it accordingly.
       errorMessage += `An error occurred at client: ${error.error.message}`;
