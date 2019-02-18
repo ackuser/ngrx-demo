@@ -1,19 +1,20 @@
 var replace = require('replace-in-file');
 var package = require("./package.json");
-var buildVersion = package.version;
+var appVersion = package.version;
 const options = {
     files: 'src/environments/environment*.ts',
     from: /version: '(.*)'/g,
-    to: "version: '"+ buildVersion + "'",
+    to: "version: '"+ appVersion + "'",
     allowEmptyPaths: false,
 };
 
 try {
     let changedFiles = replace.sync(options);
     if (changedFiles == 0) {
-        throw "Please make sure that file '" + options.files + "' has \"version: ''\"";
+      console.log('No changes to Application Version: '+ appVersion);
+    } else {
+      console.log('Application version set: ' + appVersion);
     }
-    console.log('Build version set: ' + buildVersion);
 }
 catch (error) {
     console.error('Error occurred:', error);
