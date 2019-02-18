@@ -26,11 +26,18 @@ export class CrudEffects {
     )
   );
 
-    /* Except GET, for others POST,DELET, UPADTE always use concatMap
+  /* Except GET, for others POST,DELET, UPADTE always use concatMap
    concatMap maintains order in which request comes , queue the request and
    returns the response in order it received whereas mergeMap does n't
-   maintain order. Switch will cancel the previous request , takes only
-   the latest one, switchMap is safe only for GET method. */
+   maintain order. SwitchMap can cause race conditions, SwitchMap will cancel the previous request , takes only
+   the latest one, switchMap is safe only for GET method.
+
+   Now using a concatMap can slow down things because it executes them
+   sequentially. If you don’t care about order, I’d suggest a mergeMap.
+   It will preserve all the requests but execute them right away rather
+   than waiting for the previous to succeed
+   For More detail refer: https://medium.com/@amcdnl/your-ngrx-effects-are-probably-wrong-574460868005
+   */
   @Effect()
   createEmployeeEffects$: Observable<Action> = this.actions$.pipe(
     ofType<crudActions.CRUDEmployeeCreateRequest>(crudActions.ActionTypes.CRUD_EMPLOYEE_CREATE_REQUEST),
