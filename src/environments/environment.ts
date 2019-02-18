@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false,
+  version: '2.6.0',
   configFilePath: 'assets/config/dev.config.json'
 };
 
