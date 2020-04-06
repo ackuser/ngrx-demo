@@ -38,3 +38,6 @@ documentation/
 # System Files
 .DS_Store
 Thumbs.db
+.env
+package-lock.json
+.angulardoc.json
