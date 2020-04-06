@@ -8,7 +8,7 @@ import { CoreConstants } from '@core/core.constants';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-employee-form',
   templateUrl: './employee-form.component.html',
-  styleUrls: ['./employee-form.component.css']
+  styleUrls: ['./employee-form.component.scss']
 })
 export class EmployeeFormComponent  implements OnChanges, OnInit {
 

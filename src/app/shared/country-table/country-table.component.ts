@@ -5,7 +5,7 @@ import { Country } from '@core/services/country.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-country-table',
   templateUrl: './country-table.component.html',
-  styleUrls: ['./country-table.component.css']
+  styleUrls: ['./country-table.component.scss']
 })
 export class CountryTableComponent {
 

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 @Component({
   selector: 'app-side-effects',
   templateUrl: './side-effects.component.html',
-  styleUrls: ['./side-effects.component.css']
+  styleUrls: ['./side-effects.component.scss']
 })
 export class SideEffectsComponent implements OnInit {
 

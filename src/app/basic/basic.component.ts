@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { BasicStoreSelectors, MessageStoreActions, SwitchStoreActions } from '@app/basic/store';
+import {
+  BasicStoreSelectors,
+  MessageStoreActions,
+  SwitchStoreActions,
+} from '@app/basic/store';
 import * as fromRoot from '@app/root-store';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
@@ -8,10 +12,9 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-basic',
   templateUrl: './basic.component.html',
-  styleUrls: ['./basic.component.css']
+  styleUrls: ['./basic.component.scss'],
 })
 export class BasicComponent implements OnInit {
-
   message$: Observable<String>;
   status$: Observable<boolean>;
   appEnvConfig$: Observable<any>;
@@ -19,7 +22,6 @@ export class BasicComponent implements OnInit {
   constructor(private store$: Store<fromRoot.State>) {}
 
   ngOnInit() {
-
     this.message$ = this.store$.pipe(
       select('basic'),
       map((response) => {
@@ -34,7 +36,6 @@ export class BasicComponent implements OnInit {
     this.appEnvConfig$ = this.store$.pipe(
       select(fromRoot.AppInitSelectors.selectConfig)
     );
-
   }
 
   translateInEnglish() {
@@ -68,6 +69,4 @@ export class BasicComponent implements OnInit {
   loadAppConfig() {
     this.store$.dispatch(new fromRoot.AppConfigActions.AppConfigLoadRequest());
   }
-
 }
-

@@ -5,7 +5,7 @@ import { Country } from '@core/services/country.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
   selector: 'app-country-card',
   templateUrl: './country-card.component.html',
-  styleUrls: ['./country-card.component.css']
+  styleUrls: ['./country-card.component.scss']
 })
 export class CountryCardComponent {
 
