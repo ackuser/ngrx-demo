@@ -20,6 +20,6 @@ export class AppInitStoreFacade {
   }
 }
 
-export function initApplication(appInitStoreFacade: AppInitStoreFacade):  () => Promise<any> {
+export function initApplication(appInitStoreFacade: AppInitStoreFacade): () => Promise<any> {
   return (): Promise<any> => appInitStoreFacade.loadAppConfig();
 }

@@ -16,7 +16,7 @@ export class EmployeeService {
 
   constructor(private http: HttpClient) { }
 
-  public getEmployees():  Observable<Employee[]> {
+  public getEmployees(): Observable<Employee[]> {
     return this.http.get<Employee[]>(this.apiEmployeeURL)
     .pipe(
       map((response: any) => {
@@ -29,7 +29,7 @@ export class EmployeeService {
     );
   }
 
-  public createEmployee(employee: Employee):  Observable<Employee> {
+  public createEmployee(employee: Employee): Observable<Employee> {
     return this.http.post<Employee>(
       this.apiEmployeeURL,
       employee,
@@ -46,7 +46,7 @@ export class EmployeeService {
     );
   }
 
-  public updateEmployee(employee: Employee):  Observable<Employee> {
+  public updateEmployee(employee: Employee): Observable<Employee> {
     const url = `${this.apiEmployeeURL}/${employee.id}`;
     return this.http.put<Employee>(
       url,
@@ -61,7 +61,7 @@ export class EmployeeService {
     );
   }
 
-  public removeEmployee(id: number):  Observable<number> {
+  public removeEmployee(id: number): Observable<number> {
     const url = `${this.apiEmployeeURL}/${id}`;
     return this.http.delete<number>(
       url,

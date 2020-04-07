@@ -7,12 +7,11 @@ import { catchError, finalize, map, tap } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-@Injectable()
 export class CountryService {
 
   constructor(private http: HttpClient) { }
 
-  public getCountryDetail(countryName: string):  Observable<any> {
+  public getCountryDetail(countryName: string): Observable<any> {
     return this.http.get<Country[]>(`https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`)
     .pipe(
       tap((response: any) => {
@@ -36,7 +35,7 @@ export class CountryService {
     );
   }
 
-  public getCountries(searchKey: string):  Observable<any> {
+  public getCountries(searchKey: string): Observable<any> {
     return this.http.get<Country[]>(`https://restcountries.eu/rest/v2/name/${searchKey}`)
     .pipe(
       map((response: any) => {

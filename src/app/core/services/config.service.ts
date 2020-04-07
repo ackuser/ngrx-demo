@@ -11,7 +11,7 @@ export class ConfigService {
 
   constructor(private http: HttpClient) {}
 
-  public loadAppConfig():  Observable<any[]> {
+  public loadAppConfig(): Observable<any[]> {
     /* In real world you will get it from configuration file*/
     const envConfigFilePath = environment.configFilePath;
     return this.http.get<any>(envConfigFilePath)
