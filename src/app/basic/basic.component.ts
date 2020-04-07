@@ -15,7 +15,7 @@ import { map } from 'rxjs/operators';
   styleUrls: ['./basic.component.scss'],
 })
 export class BasicComponent implements OnInit {
-  message$: Observable<String>;
+  message$: Observable<string>;
   status$: Observable<boolean>;
   appEnvConfig$: Observable<any>;
 

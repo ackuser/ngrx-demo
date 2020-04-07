@@ -12,7 +12,7 @@ export class CountryService {
 
   constructor(private http: HttpClient) { }
 
-  public getCountryDetail(countryName: String):  Observable<any> {
+  public getCountryDetail(countryName: string):  Observable<any> {
     return this.http.get<Country[]>(`https://restcountries.eu/rest/v2/name/${countryName}?fullText=true`)
     .pipe(
       tap((response: any) => {

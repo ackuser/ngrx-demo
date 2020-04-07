@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class LazyLoadComponent implements OnInit {
 
-  message$: Observable<String>;
+  message$: Observable<string>;
 
   constructor(private store$: Store<fromRoot.State>) {}
 

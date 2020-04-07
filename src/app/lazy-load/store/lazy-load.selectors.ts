@@ -5,7 +5,7 @@ import { createFeatureSelector, createSelector, MemoizedSelector } from '@ngrx/s
 // Selector functions
 const selectLazyLoadFeatureState: MemoizedSelector<object, LazyLoadState> = createFeatureSelector<LazyLoadState>('lazyLoad');
 
-export const selectMessage: MemoizedSelector<object, String> = createSelector(
+export const selectMessage: MemoizedSelector<object, string> = createSelector(
   selectLazyLoadFeatureState,
-  (state: LazyLoadState): String => state.message
+  (state: LazyLoadState): string => state.message
 );
