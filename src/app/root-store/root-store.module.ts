@@ -6,7 +6,7 @@ import { RootStoreEffects } from '@app/root-store/root-store.effects';
 import { CustomSerializer } from '@app/root-store/router-store/custom-serializer';
 import { environment } from '@env/environment';
 import { EffectsModule } from '@ngrx/effects';
-import { RouterStateSerializer, StoreRouterConnectingModule } from '@ngrx/router-store';
+import { RouterStateSerializer, StoreRouterConnectingModule, DefaultRouterStateSerializer } from '@ngrx/router-store';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
@@ -40,7 +40,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
      * StoreDev Tool should be enabled only for non-production environments
      */
     // Connects RouterModule with StoreModule
-    StoreRouterConnectingModule.forRoot({}),
+    StoreRouterConnectingModule.forRoot({ serializer: DefaultRouterStateSerializer,}),
 
     environment.production
     ? []
