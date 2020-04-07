@@ -8,7 +8,7 @@ import { SharedModule } from '@shared/shared.module';
   declarations: [LazyLoadRoutingModule.components],
   imports: [
     SharedModule,
-      /**
+    /**
      * StoreModule.forFeature is imported in this feature module, accepting a reducer
      * function or object map of reducer functions. It is used for composing state
      * from feature modules. These modules can be loaded eagerly or lazily and

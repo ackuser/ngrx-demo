@@ -13,18 +13,18 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 @NgModule({
   imports: [
     CommonModule,
-     /**
-     * StoreModule.forRoot is imported once in the root module, accepting a reducer
-     * function or object map of reducer functions. If passed an object of
-     * reducers, combineReducers will be run creating your application
-     * meta-reducer. This returns all providers for an @ngrx/store
-     * based application. GenerallyIt forRoot is register with Global level reducer to
-     * manage global state like authorization, analytics etc.
-     * routerReducer is out of the box reducer provided by '@ngrx/router-store'
-     * to manage latest router's state in store. Router state consists of route params,
-     * query params, url, outlet, routeConfig, data
-     *
-     */
+   /**
+    * StoreModule.forRoot is imported once in the root module, accepting a reducer
+    * function or object map of reducer functions. If passed an object of
+    * reducers, combineReducers will be run creating your application
+    * meta-reducer. This returns all providers for an @ngrx/store
+    * based application. GenerallyIt forRoot is register with Global level reducer to
+    * manage global state like authorization, analytics etc.
+    * routerReducer is out of the box reducer provided by '@ngrx/router-store'
+    * to manage latest router's state in store. Router state consists of route params,
+    * query params, url, outlet, routeConfig, data
+    *
+    */
     StoreModule.forRoot(reducers, {metaReducers}),
     /**
      * EffectsModule.forRoot() is imported once in the root module and
