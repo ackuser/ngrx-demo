@@ -17,7 +17,7 @@ export function crudReducer(state = initialState, action: Union): CrudState {
 
     case ActionTypes.CRUD_EMPLOYEE_LOAD_SUCCESS: {
       // Replace current collection with provided collection
-      return crudEntityadapter.addAll(action.payload, {
+      return crudEntityadapter.setAll(action.payload, {
         ...state,
         isLoading: false,
         error: null

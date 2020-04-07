@@ -13,7 +13,7 @@ export class AppInitStoreFacade {
   public loadAppConfig(): Promise<any> {
     return new Promise((resolve, reject) => {
       console.log(`initializeApp:: inside promise`);
-      this.store$.dispatch(new AppConfigActions.AppInitStart);
+      this.store$.dispatch(new AppConfigActions.AppInitStart());
       this.store$.dispatch(new AppConfigActions.AppConfigLoadRequest());
       resolve(true);
     });

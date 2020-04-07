@@ -12,7 +12,7 @@ export function search2Reducer(state = initialState, action: Union): Search2Stat
       };
 
     case ActionTypes.SEARCH2_COUNTRIES_SUCCESS: {
-      return search2Entityadapter.addAll(action.payload, {
+      return search2Entityadapter.setAll(action.payload, {
         ...state,
         isLoading: false,
         error: null

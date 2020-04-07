@@ -16,7 +16,7 @@ export function crud2Reducer(state = initialState, action: Union): Crud2State {
     }
 
     case ActionTypes.CRUD2_EMPLOYEE_LOAD_SUCCESS: {
-      return crudEntityadapter.addAll(action.payload, {
+      return crudEntityadapter.setAll(action.payload, {
         ...state,
         isLoading: false,
         error: null
