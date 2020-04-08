@@ -8,7 +8,6 @@ import { catchError, finalize, map } from 'rxjs/operators';
 @Injectable({
   providedIn: InMemoryApiModule
 })
-@Injectable()
 export class EmployeeService {
 
   private apiEmployeeURL = `api/employees`;
