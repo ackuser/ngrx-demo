@@ -10,7 +10,6 @@ import { CustomSerializer } from '@app/root-store/router-store/custom-serializer
 import { environment } from '@env/environment';
 import { EffectsModule } from '@ngrx/effects';
 import {
-  DefaultRouterStateSerializer,
   RouterStateSerializer,
   StoreRouterConnectingModule,
 } from '@ngrx/router-store';
@@ -30,7 +29,11 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
      * routerReducer is out of the box reducer provided by '@ngrx/router-store'
      * to manage latest router's state in store. Router state consists of route params,
      * query params, url, outlet, routeConfig, data
-     *
+     * In NgRx 8 and above, third-party library `ngrx-store-freeze` to guard against state
+     * mutations is replaced with built-in runtime checks in ngRx. Runtime checks are here
+     * to guide developers to follow the NgRx and Redux core concepts and best practices.
+     * All runtime checks will automatically be disabled in production builds.
+     * For more detail, refer https://ngrx.io/guide/store/configuration/runtime-checks.
      */
     StoreModule.forRoot(reducers, { metaReducers }),
     /**
@@ -47,9 +50,7 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
      * StoreDev Tool should be enabled only for non-production environments
      */
     // Connects RouterModule with StoreModule
-    StoreRouterConnectingModule.forRoot({
-      serializer: DefaultRouterStateSerializer,
-    }),
+    StoreRouterConnectingModule.forRoot({}),
 
     environment.production
       ? []
